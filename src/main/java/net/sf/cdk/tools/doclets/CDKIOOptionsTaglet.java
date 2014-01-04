@@ -127,7 +127,7 @@ public class CDKIOOptionsTaglet implements Taglet {
 
         String path = file.getPath().replaceAll(File.separator, ".");
 
-        return path.substring(path.indexOf("src.main.java") + 14,
+        return path.substring(path.indexOf("org.openscience.cdk"),
                               path.lastIndexOf(".java"));
     }
 

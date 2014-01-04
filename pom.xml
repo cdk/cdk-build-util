@@ -15,10 +15,36 @@
             <artifactId>xom</artifactId>
             <version>1.2.5</version>
         </dependency>
+        <!-- for now -->
+        <!-- mvn install:install-file -DgroupId=com.github.ojdcheck -DartifactId=ojdcheck -Dversion=1.0 -DgeneratePom=true -Dpackaging=jar -Dfile=ojdcheck.jar -->
+        <dependency>
+            <groupId>com.github.ojdcheck</groupId>
+            <artifactId>ojdcheck</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.openscience.cdk</groupId>
             <artifactId>cdk-io</artifactId>
-            <version>LATEST</version>
+            <version>1.5.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openscience.cdk</groupId>
+            <artifactId>cdk-silent</artifactId>
+            <version>1.5.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openscience.cdk</groupId>
+            <artifactId>cdk-extra</artifactId>
+            <version>1.5.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openscience.cdk</groupId>
+            <artifactId>cdk-core</artifactId>
+            <version>1.5.4</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

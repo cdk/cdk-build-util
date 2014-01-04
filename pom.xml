@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.openscience.cdk</groupId>
+    <artifactId>cdk-build-utils</artifactId>
+    <version>1.0</version>
+
+    <dependencies>
+        <dependency>                 
+            <groupId>xom</groupId>
+            <artifactId>xom</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openscience.cdk</groupId>
+            <artifactId>cdk-io</artifactId>
+            <version>LATEST</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jdk.tools</groupId>
+            <artifactId>jdk.tools</artifactId>
+            <version>${java.version}</version>
+            <scope>system</scope>
+            <systemPath>${java.home}/../lib/tools.jar</systemPath>
+        </dependency>      
+    </dependencies>
+    
+    <repositories>
+        <repository>
+            <id>ebi-repo</id>
+            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo</url>
+        </repository>
+        <repository>
+            <id>ebi-repo-snapshots</id>
+            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo-snapshots</url>
+        </repository>
+    </repositories>
+
+</project>

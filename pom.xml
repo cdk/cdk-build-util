@@ -9,6 +9,19 @@
     <artifactId>cdk-build-utils</artifactId>
     <version>1.0.1</version>
 
+    <distributionManagement>
+        <repository>
+            <id>cdk-repo</id>
+            <name>CDK Repository</name>
+            <url>${cdk.repo.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>cdk-repo-snapshots</id>
+            <name>CDK Snapshot Repository</name>
+            <url>${cdk.repo.snapshots.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>                 
             <groupId>xom</groupId>

@@ -349,56 +349,56 @@
     </bibtex:phdthesis>
   </bibtex:entry>
   
-  <bibtex:entry id="Halgren95a">
+  <bibtex:entry id="Halgren96a">
       <bibtex:article>
         <bibtex:author>T. A. Halgren</bibtex:author>
         <bibtex:title>Merck Molecular Force Field. I. Basis, Form, Scope, Parametrization, and Performance of MMFF94</bibtex:title>
         <bibtex:journal>J. Comput. Chem</bibtex:journal>
-        <bibtex:year>1995</bibtex:year>
+        <bibtex:year>1996</bibtex:year>
         <bibtex:volume>17</bibtex:volume>
         <bibtex:pages>490-519</bibtex:pages>
       </bibtex:article>
   </bibtex:entry>
   
-  <bibtex:entry id="Halgren95b">
+  <bibtex:entry id="Halgren96b">
         <bibtex:article>
           <bibtex:author>T. A. Halgren</bibtex:author>
           <bibtex:title>Merck Molecular Force Field. II. MMFF94 van der Waals and Electrostatic Parameters for Intermolecular Interactions</bibtex:title>
           <bibtex:journal>J. Comput. Chem</bibtex:journal>
-          <bibtex:year>1995</bibtex:year>
+          <bibtex:year>1996</bibtex:year>
           <bibtex:volume>17</bibtex:volume>
           <bibtex:pages>520-552</bibtex:pages>
         </bibtex:article>
   </bibtex:entry>  
   
-  <bibtex:entry id="Halgren95c">
+  <bibtex:entry id="Halgren96c">
         <bibtex:article>
           <bibtex:author>T. A. Halgren</bibtex:author>
           <bibtex:title>Merck Molecular Force Field. III. Molecular Geometries and Vibrational Frequencies for MMFF94</bibtex:title>
           <bibtex:journal>J. Comput. Chem</bibtex:journal>
-          <bibtex:year>1995</bibtex:year>
+          <bibtex:year>1996</bibtex:year>
           <bibtex:volume>17</bibtex:volume>
           <bibtex:pages>553-586</bibtex:pages>
         </bibtex:article>
   </bibtex:entry>
   
-  <bibtex:entry id="Halgren95d">
+  <bibtex:entry id="Halgren96d">
         <bibtex:article>
           <bibtex:author>T. A. Halgren</bibtex:author>
           <bibtex:title>Merck Molecular Force Field. IV. Conformational Energies and Geometries for MMFF94</bibtex:title>
           <bibtex:journal>J. Comput. Chem</bibtex:journal>
-          <bibtex:year>1995</bibtex:year>
+          <bibtex:year>1996</bibtex:year>
           <bibtex:volume>17</bibtex:volume>
           <bibtex:pages>587-615</bibtex:pages>
         </bibtex:article>
   </bibtex:entry>
   
-  <bibtex:entry id="Halgren95e">
+  <bibtex:entry id="Halgren96e">
         <bibtex:article>
           <bibtex:author>T. A. Halgren</bibtex:author>
           <bibtex:title>Merck Molecular Force Field. V. Extension of MMFF94 Using Experimental Data, Additional Computational Data, and Empirical Rules</bibtex:title>
           <bibtex:journal>J. Comput. Chem</bibtex:journal>
-          <bibtex:year>1995</bibtex:year>
+          <bibtex:year>1996</bibtex:year>
           <bibtex:volume>17</bibtex:volume>
           <bibtex:pages>616-641</bibtex:pages>
         </bibtex:article>

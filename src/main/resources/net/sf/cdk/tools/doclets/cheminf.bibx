@@ -1380,7 +1380,19 @@ Method </bibtex:title>
             <bibtex:volume>33</bibtex:volume>
             <bibtex:pages>812-825</bibtex:pages>
         </bibtex:article>
-    </bibtex:entry>  
+    </bibtex:entry>
+    
+    <bibtex:entry id="Rogers2010">
+        <bibtex:article>
+             <bibtex:author>Rogers and Hahn</bibtex:author>
+             <bibtex:title>Extended-connectivity fingerprints</bibtex:title>
+             <bibtex:journal>J. Chem. Inf. Mod.</bibtex:journal>
+             <bibtex:year>2010</bibtex:year>
+             <bibtex:volume>50</bibtex:volume>
+             <bibtex:pages>742-754</bibtex:pages>
+             <bibtex:doi>10.1021/ci100050t</bibtex:doi>
+         </bibtex:article>
+    </bibtex:entry>
     
     <bibtex:entry id="OBoyle12">
         <bibtex:article>

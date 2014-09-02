@@ -46,6 +46,18 @@
     </bibtex:article>
   </bibtex:entry>
   
+  <bibtex:entry id="Brecher08">
+    <bibtex:article>
+      <bibtex:author>Jonathan Brecher</bibtex:author>
+      <bibtex:title>Graphical representation standards for chemical structure diagrams (IUPAC Recommendations 2008)</bibtex:title>
+      <bibtex:journal>Pure Appl. Chem</bibtex:journal>
+      <bibtex:year>2008</bibtex:year>
+      <bibtex:volume>80</bibtex:volume>
+      <bibtex:number>2</bibtex:number>
+      <bibtex:pages>277–410</bibtex:pages>
+    </bibtex:article>
+  </bibtex:entry>
+  
   <bibtex:entry id="Cahn1966">
     <bibtex:article>
       <bibtex:author>Cahn, R.S. and Ingold, C. and Prelog, V.</bibtex:author>
@@ -66,6 +78,17 @@
       <bibtex:year>2001</bibtex:year>
       <bibtex:volume>6</bibtex:volume>      
       <bibtex:pages>915-926</bibtex:pages>
+    </bibtex:article>
+  </bibtex:entry>
+  
+  <bibtex:entry id="Clark13">
+    <bibtex:article>
+      <bibtex:author>Clark A.</bibtex:author>
+      <bibtex:title>Rendering Molecular Sketches for Publication Quality Output</bibtex:title>
+      <bibtex:journal>Molecular Informatics</bibtex:journal>
+      <bibtex:year>2013</bibtex:year>
+      <bibtex:volume>32</bibtex:volume>      
+      <bibtex:pages>291-301</bibtex:pages>
     </bibtex:article>
   </bibtex:entry>
 

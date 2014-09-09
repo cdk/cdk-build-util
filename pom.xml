@@ -7,7 +7,7 @@
 
     <groupId>org.openscience.cdk</groupId>
     <artifactId>cdk-build-utils</artifactId>
-    <version>1.0.2.1</version>
+    <version>1.0.2.2</version>
 
     <distributionManagement>
         <repository>
@@ -39,25 +39,31 @@
         <dependency>
             <groupId>org.openscience.cdk</groupId>
             <artifactId>cdk-io</artifactId>
-            <version>1.5.4</version>
+            <version>1.5.8-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.openscience.cdk</groupId>
             <artifactId>cdk-silent</artifactId>
-            <version>1.5.4</version>
+            <version>1.5.8-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.openscience.cdk</groupId>
             <artifactId>cdk-extra</artifactId>
-            <version>1.5.4</version>
+            <version>1.5.8-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.openscience.cdk</groupId>
             <artifactId>cdk-core</artifactId>
-            <version>1.5.4</version>
+            <version>1.5.8-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency> 
+        <dependency>
+            <groupId>org.openscience.cdk</groupId>
+            <artifactId>cdk-sdg</artifactId>
+            <version>1.5.8-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

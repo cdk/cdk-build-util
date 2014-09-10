@@ -20,6 +20,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
@@ -67,8 +68,9 @@ public class RingTemplateExtractor {
                 new ArrayList<Map.Entry<String, Collection<IAtomContainer>>>(library.asMap().entrySet());
         
         // sort by frequency
-        list.sort(new Comparator<Map.Entry<String, Collection<IAtomContainer>>>() {
-            @Override public int compare(Map.Entry<String, Collection<IAtomContainer>> o1, Map.Entry<String, Collection<IAtomContainer>> o2) {
+        Collections.sort(list, new Comparator<Map.Entry<String, Collection<IAtomContainer>>>() {
+            @Override public int compare(Map.Entry<String, Collection<IAtomContainer>> o1,
+                                         Map.Entry<String, Collection<IAtomContainer>> o2) {
                 return o2.getValue().size() - o1.getValue().size();
             }
         });         

@@ -97,6 +97,19 @@ public class BibTeXMLEntry {
                 getString(misc, "title", "?Title?")
             );
         }
+        // b:techreport
+        results = entry.query("./b:techreport", context);
+        for (int i=0; i<results.size(); i++) {
+            Element techreport = (Element)results.get(i);
+            // the obligatory fields
+            return formatTechReport(
+                getString(techreport, "author", "?Authors?"),
+                getString(techreport, "title", "?Title?"),
+                getString(techreport, "year", "19??"),
+                getString(techreport, "institution", "?Institute?"),
+                getString(techreport, "url", null)
+            );
+        }
 		return "Unknown BibTeXML type: " + ((Element)entry).getAttributeValue("id");
 	}
 
@@ -127,6 +140,18 @@ public class BibTeXMLEntry {
         buffer.append(authors).append(", <i>").append(title).append("</i>, ");
         buffer.append("<b>").append(year).append("</b>, ");
         buffer.append(publisher);
+        return buffer.toString();
+    }
+
+    protected String formatTechReport(String authors, String title, String year, String institution, String url) {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append(authors).append(", <i>").append(title).append("</i>, ");
+        buffer.append("<b>").append(year).append("</b>, ");
+        buffer.append(institution);
+        if (url != null) {
+            buffer.append(", ").append("<a href=\"").append(url);
+            buffer.append("\">").append(url).append("</a>");
+        }
         return buffer.toString();
     }
     

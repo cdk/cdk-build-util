@@ -63,6 +63,22 @@ public class BibTeXMLEntry {
 				getString(article, "pages", "?-?")
 			);
 		}
+		// b:inbook
+		results = entry.query("./b:inbook", context);
+		for (int i=0; i<results.size(); i++) {
+			Element inbook = (Element)results.get(i);
+			// the obligatory fields
+			return formatInBook(
+				getString(inbook, "author", "?Authors?"),
+				getString(inbook, "title", "?Title?"),
+				getString(inbook, "chapter", "?chapter?"),
+				getString(inbook, "year", "19??"),
+				getString(inbook, "volume", "?"),
+				getString(inbook, "series", "?In Series?"),
+				getString(inbook, "editor", "?Editors?"),
+				getString(inbook, "pages", "?-?")
+			);
+		}
 		// b:thesis
 		results = entry.query("./b:phdthesis", context);
 		for (int i=0; i<results.size(); i++) {
@@ -111,6 +127,18 @@ public class BibTeXMLEntry {
             );
         }
 		return "Unknown BibTeXML type: " + ((Element)entry).getAttributeValue("id");
+	}
+
+	private String formatInBook(String authors, String title, String chapter,
+			String year, String volume, String series, String editor,
+			String pages) {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(authors).append(", <i>").append(title).append("</i>, ");
+		buffer.append(series).append(", Ch. ").append(chapter);
+		buffer.append(", <b>").append(year).append("</b>, ");
+		buffer.append(volume).append(":").append(pages);
+		buffer.append(", Eds. ").append(editor);
+		return buffer.toString();
 	}
 
 	protected String formatArticle(String authors, String title, String journal, String year, String volume, String pages) {

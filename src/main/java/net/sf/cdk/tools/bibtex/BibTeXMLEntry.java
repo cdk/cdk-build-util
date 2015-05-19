@@ -60,7 +60,8 @@ public class BibTeXMLEntry {
 				getString(article, "journal", "?Journal?"),
 				getString(article, "year", "19??"),
 				getString(article, "volume", "?"),
-				getString(article, "pages", "?-?")
+				getString(article, "pages", "?-?"),
+				getString(article, "doi", null)
 			);
 		}
 		// b:inbook
@@ -76,7 +77,8 @@ public class BibTeXMLEntry {
 				getString(inbook, "volume", "?"),
 				getString(inbook, "series", "?In Series?"),
 				getString(inbook, "editor", "?Editors?"),
-				getString(inbook, "pages", "?-?")
+				getString(inbook, "pages", "?-?"),
+				getString(inbook, "doi", null)
 			);
 		}
 		// b:thesis
@@ -131,21 +133,30 @@ public class BibTeXMLEntry {
 
 	private String formatInBook(String authors, String title, String chapter,
 			String year, String volume, String series, String editor,
-			String pages) {
+			String pages, String doi) {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(authors).append(", <i>").append(title).append("</i>, ");
 		buffer.append(series).append(", Ch. ").append(chapter);
 		buffer.append(", <b>").append(year).append("</b>, ");
 		buffer.append(volume).append(":").append(pages);
 		buffer.append(", Eds. ").append(editor);
+		optionallyAppendDOI(doi, buffer);
 		return buffer.toString();
 	}
 
-	protected String formatArticle(String authors, String title, String journal, String year, String volume, String pages) {
+	private void optionallyAppendDOI(String doi, StringBuffer buffer) {
+		if (doi == null) return;
+		buffer.append(", doi:<a href=\"http://dx.doi.org/")
+		    .append(doi).append("\">").append(doi).append("</a>");
+	}
+
+	protected String formatArticle(String authors, String title, String journal, String year,
+			String volume, String pages, String doi) {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(authors).append(", <i>").append(title).append("</i>, ");
 		buffer.append(journal).append(", <b>").append(year).append("</b>, ");
 		buffer.append(volume).append(":").append(pages);
+		optionallyAppendDOI(doi, buffer);
 		return buffer.toString();
 	}
 	

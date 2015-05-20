@@ -1313,6 +1313,7 @@ Method </bibtex:title>
             <bibtex:year>2005</bibtex:year>
             <bibtex:volume>45</bibtex:volume>
             <bibtex:pages>386-393</bibtex:pages>
+            <bibtex:doi>10.1021/ci0496797</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1359,6 +1360,7 @@ Method </bibtex:title>
             <bibtex:year>2010</bibtex:year>
             <bibtex:volume>50</bibtex:volume>
             <bibtex:pages>1223-1232</bibtex:pages>
+            <bibtex:doi>10.1021/ci1001179</bibtex:doi>
         </bibtex:article>
    </bibtex:entry>
    
@@ -1400,6 +1402,7 @@ Method </bibtex:title>
             <bibtex:journal>Journal of the Association for Computing Machinery</bibtex:journal>
             <bibtex:volume>23</bibtex:volume>
             <bibtex:number>1</bibtex:number>
+            <bibtex:doi>10.1145/321921.321925</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>  
     
@@ -1407,8 +1410,7 @@ Method </bibtex:title>
     <bibtex:article>
       <bibtex:author>Vismara, Philippe</bibtex:author>
       <bibtex:title>Union of all the minimum cycle bases of a graph</bibtex:title>
-      <bibtex:year>1997</bibtex:year> 
-      <bibtex:doi>10.1.1.47.3674</bibtex:doi>
+      <bibtex:year>1997</bibtex:year>
       <bibtex:url>http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.3674</bibtex:url>
       <bibtex:journal>Combinatorics</bibtex:journal>
       <bibtex:volume>4</bibtex:volume>
@@ -1439,6 +1441,7 @@ Method </bibtex:title>
             <bibtex:journal>J. Chem. Inf. Comput. Sci</bibtex:journal>
             <bibtex:volume>33</bibtex:volume>
             <bibtex:pages>812-825</bibtex:pages>
+            <bibtex:doi>10.1021/ci00016a003</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
     
@@ -1462,6 +1465,7 @@ Method </bibtex:title>
             <bibtex:journal>Journal of Cheminformatics</bibtex:journal>
             <bibtex:volume>4</bibtex:volume>
             <bibtex:number>22</bibtex:number>
+            <bibtex:doi>10.1186/1758-2946-4-22</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
     

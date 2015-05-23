@@ -1206,6 +1206,7 @@ Method </bibtex:title>
             <bibtex:year>1986</bibtex:year>
             <bibtex:volume>7</bibtex:volume>
             <bibtex:pages>565-577</bibtex:pages>
+            <bibtex:doi>10.1002/jcc.540070419</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1218,6 +1219,7 @@ Method </bibtex:title>
             <bibtex:year>1987</bibtex:year>
             <bibtex:volume>27</bibtex:volume>
             <bibtex:pages>21-35</bibtex:pages>
+            <bibtex:doi>10.1021/ci00053a005</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1241,6 +1243,7 @@ Method </bibtex:title>
             <bibtex:year>1995</bibtex:year>
             <bibtex:volume>35</bibtex:volume>
             <bibtex:pages>1039-1045</bibtex:pages>
+            <bibtex:doi>10.1021/ci00028a014</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1256,6 +1259,7 @@ Method </bibtex:title>
             <bibtex:year>2004</bibtex:year>
             <bibtex:volume>9</bibtex:volume>
             <bibtex:pages>1004-1009</bibtex:pages>
+            <bibtex:doi>10.3390/91201004</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1269,6 +1273,7 @@ Method </bibtex:title>
             <bibtex:year>2000</bibtex:year>
             <bibtex:volume>18</bibtex:volume>
             <bibtex:pages>464-477</bibtex:pages>
+            <bibtex:doi>10.1016/S1093-3263(00)00068-1</bibtex:doi>
         </bibtex:article>
     </bibtex:entry> 
 
@@ -1280,6 +1285,7 @@ Method </bibtex:title>
             <bibtex:year>2006</bibtex:year>
             <bibtex:volume>78</bibtex:volume>
             <bibtex:pages>1897-1970</bibtex:pages>
+            <bibtex:doi>10.1351/pac200678101897</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1291,6 +1297,7 @@ Method </bibtex:title>
             <bibtex:year>2009</bibtex:year>
             <bibtex:volume>1</bibtex:volume>
             <bibtex:pages>12</bibtex:pages>
+            <bibtex:doi>10.1186/1758-2946-1-12</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1302,6 +1309,7 @@ Method </bibtex:title>
             <bibtex:year>2010</bibtex:year>
             <bibtex:volume>ASAP</bibtex:volume>
             <bibtex:pages></bibtex:pages>
+            <bibtex:doi>10.1021/jm1008456</bibtex:doi>
         </bibtex:article>
     </bibtex:entry>
 

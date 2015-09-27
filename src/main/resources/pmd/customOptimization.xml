@@ -6,7 +6,6 @@
   </description>
 
   <rule ref="rulesets/java/junit.xml">
-    <exclude name="MethodArgumentCouldBeFinal"/>
   </rule>
 
 </ruleset>

@@ -10,6 +10,7 @@ find . -name "dependencies.dot" | xargs cat | grep -v digraph | \
   grep -v "}" | sed s/org.openscience.cdk://g | sed s/:jar:1.5.13-SNAPSHOT//g | \
   grep -v "test" | sed s/:compile//g | grep -v "cdk-bundle" | \
   grep -v "cdk-builder3dtools" | grep -v "cdk-legacy" | grep -v "cdk-depict" | \
+  grep -v "cdk-smsd" | \
   sort | uniq >> cdkDeps.dot
 echo "}" >> cdkDeps.dot
 

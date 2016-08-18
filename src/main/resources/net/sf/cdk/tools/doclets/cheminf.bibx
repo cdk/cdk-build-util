@@ -46,6 +46,16 @@
     </bibtex:article>
   </bibtex:entry>
   
+  <bibtex:entry id="BODR10">
+    <bibtex:misc>
+      <bibtex:author>Willighagen, E. and Hutchinson, G. and Niehaus, C. and Buchwald, J. and Pfeiffer, M. and Leidert, D. and Brefort, J.</bibtex:author>
+      <bibtex:title>Blue Obelisk Data Repository (version 10)</bibtex:title>
+      <bibtex:journal>Figshare</bibtex:journal>
+      <bibtex:year>2014</bibtex:year>
+      <bibtex:doi>10.6084/m9.figshare.1025775.v1</bibtex:doi>
+    </bibtex:misc>
+  </bibtex:entry>
+
   <bibtex:entry id="Brecher08">
     <bibtex:article>
       <bibtex:author>Jonathan Brecher</bibtex:author>
@@ -371,6 +381,18 @@
       <bibtex:year>1980</bibtex:year>
       <bibtex:volume>36</bibtex:volume>
       <bibtex:pages>3219-3288</bibtex:pages>
+    </bibtex:article>
+  </bibtex:entry>
+
+  <bibtex:entry id="Guha2006">
+    <bibtex:article>
+      <bibtex:author>Guha, R. and Howard, M.T. and Hutchison, G.R. and Murray-Rust, P. and Rzepa, H. and Steinbeck, S. and Wegner, J. and Willighagen, E.L.</bibtex:author>
+      <bibtex:title>The Blue Obelisks - Interoperability in Chemical Informatics</bibtex:title>
+      <bibtex:journal>J. Chem. Inf. Model.</bibtex:journal>
+      <bibtex:year>2006</bibtex:year>
+      <bibtex:volume>46</bibtex:volume>
+      <bibtex:pages>991-998</bibtex:pages>
+      <bibtex:doi>10.1021/ci050400b</bibtex:doi>
     </bibtex:article>
   </bibtex:entry>
 

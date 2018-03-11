@@ -5,6 +5,40 @@
 
   <!-- This file is preferably edited in jEdit with the XML plugin installed -->
 
+  <bibtex:entry bibtex:id="Murray1996">
+    <bibtex:book>
+      <bibtex:author>James F. Murray and William vanRyper</bibtex:author>
+      <bibtex:title>Encyclopedia of Graphics File Formats, 2nd ed.</bibtex:title>
+      <bibtex:publisher>O'Reilly &amp; Associates, Inc.</bibtex:publisher>
+      <bibtex:year>1996</bibtex:year>
+      <bibtex:month>May</bibtex:month>
+      <bibtex:isbn>1565921615</bibtex:isbn>
+      <bibtex:url>http://shop.oreilly.com/product/9781565921610.do</bibtex:url>
+    </bibtex:book>
+  </bibtex:entry>
+
+  <bibtex:entry bibtex:id="Adobe1992">
+    <bibtex:book>
+      <bibtex:author>Adobe Developer Technologies</bibtex:author>
+      <bibtex:title>PostScript Language Document Structuring Conventions Specification</bibtex:title>
+      <bibtex:publisher>Adobe Systems Incorporated</bibtex:publisher>
+      <bibtex:year>1992</bibtex:year>
+      <bibtex:size>532522 octets</bibtex:size>
+      <bibtex:url>https://www-cdf.fnal.gov/offline/PostScript/5001.PDF</bibtex:url>
+    </bibtex:book>
+  </bibtex:entry>
+
+  <bibtex:entry bibtex:id="Adobe1992a">
+    <bibtex:book>
+      <bibtex:author>Adobe Systems Incorporated</bibtex:author>
+      <bibtex:title>Encapsulated PostScript File Format Specification, Version 3.0</bibtex:title>
+      <bibtex:publisher>Adobe Systems Incorporated</bibtex:publisher>
+      <bibtex:year>1992</bibtex:year>
+      <bibtex:size>130507 octets</bibtex:size>
+      <bibtex:url>https://www-cdf.fnal.gov/offline/PostScript/5002.PDF</bibtex:url>
+    </bibtex:book>
+  </bibtex:entry>
+
   <bibtex:entry id="AiresDeSousa2002">
     <bibtex:article>
       <bibtex:author>Aires-de-Sousa, J. and Hemmer, M.C. and Gasteiger, J.</bibtex:author>

@@ -84,7 +84,7 @@
     <bibtex:misc>
       <bibtex:author>Willighagen, E. and Hutchinson, G. and Niehaus, C. and Buchwald, J. and Pfeiffer, M. and Leidert, D. and Brefort, J.</bibtex:author>
       <bibtex:title>Blue Obelisk Data Repository (version 10)</bibtex:title>
-      <bibtex:journal>Figshare</bibtex:journal>
+      <bibtex:howpublished>Figshare</bibtex:howpublished>
       <bibtex:year>2014</bibtex:year>
       <bibtex:doi>10.6084/m9.figshare.1025775.v1</bibtex:doi>
     </bibtex:misc>

@@ -98,7 +98,7 @@
       <bibtex:year>2008</bibtex:year>
       <bibtex:volume>80</bibtex:volume>
       <bibtex:number>2</bibtex:number>
-      <bibtex:pages>277–410</bibtex:pages>
+      <bibtex:pages>277--410</bibtex:pages>
     </bibtex:article>
   </bibtex:entry>
   
@@ -969,7 +969,7 @@ obtained by accurate mass spectrometry</bibtex:title>
       <bibtex:journal>J. Chem. Inf. Model.</bibtex:journal>
       <bibtex:year>2009</bibtex:year>
       <bibtex:volume>49</bibtex:volume>
-      <bibtex:pages>338–347</bibtex:pages>
+      <bibtex:pages>338--347</bibtex:pages>
       <bibtex:crossref>DOI:10.1021/ci800326z</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>

@@ -232,11 +232,11 @@
     <bibtex:inproceedings>
       <bibtex:author>Borgelt, C. and Berthold, M.R.</bibtex:author>
       <bibtex:title>Mining Molecular Fragments: Finding Relevant Substructures of Molecules</bibtex:title>
-      <bibtex:year>2002</bibtex:year>
       <bibtex:booktitle>ICDM '02: Proceedings of the 2002 IEEE International Conference on Data Mining (ICDM'02)</bibtex:booktitle>
-      <bibtex:isbn>0769517544</bibtex:isbn>
-      <bibtex:publisher>IEEE Computer Society</bibtex:publisher>
+      <bibtex:year>2002</bibtex:year>
       <bibtex:address>Washington, DC, USA</bibtex:address>
+      <bibtex:publisher>IEEE Computer Society</bibtex:publisher>
+      <bibtex:isbn>0769517544</bibtex:isbn>
     </bibtex:inproceedings>
   </bibtex:entry>
 
@@ -397,13 +397,15 @@
   <bibtex:entry bibtex:id="GM2003">
     <bibtex:inbook>
       <bibtex:author>Gasteiger, J.</bibtex:author>
+      <!-- <bibtex:editor>Gasteiger, J.</bibtex:editor> The 'editor'
+           element is alternative to 'author' and they may not be used
+           both -->
       <bibtex:title>A Hierarchy of Structure Representations</bibtex:title>
       <bibtex:chapter>3</bibtex:chapter>
       <bibtex:pages>3219-3288</bibtex:pages>
       <bibtex:year>1980</bibtex:year>
       <bibtex:volume>3</bibtex:volume>
       <bibtex:series>Handbook of Chemoinformatics</bibtex:series>
-      <bibtex:editor>Gasteiger, J.</bibtex:editor>
     </bibtex:inbook>
   </bibtex:entry>
 
@@ -434,9 +436,11 @@
     <bibtex:phdthesis>
       <bibtex:author>Saller, H.</bibtex:author>
       <bibtex:title>Quantitative Emperische Modelle fur Elektronische Effekte in Pi-Systemen und fur die Chemische Reaktivitat</bibtex:title>
-      <bibtex:journal> Tetrahedron</bibtex:journal>
+      <!-- <bibtex:journal>Tetrahedron</bibtex:journal> Journal makes
+           no sense for PhD, does it? It is also forbidden by the
+           schema, for a good reason... -->
+      <bibtex:school>Thecn. Univ. Munchen</bibtex:school>
       <bibtex:year>1985</bibtex:year>
-      <bibtex:adress>Thecn. Univ. Munchen</bibtex:adress>
     </bibtex:phdthesis>
   </bibtex:entry>
   
@@ -536,29 +540,31 @@
       <bibtex:journal>Journal of Cheminformatics</bibtex:journal>
       <bibtex:year>2011</bibtex:year>
       <bibtex:volume>3</bibtex:volume>
-      <bibtex:pages>1-14</bibtex:pages>
       <bibtex:number>1</bibtex:number>
-      <bibtex:url>https://doi.org/10.1186/1758-2946-3-3</bibtex:url>
+      <bibtex:pages>1-14</bibtex:pages>
       <bibtex:crossref>DOI:10.1186/1758-2946-3-3</bibtex:crossref>
+      <bibtex:url>https://doi.org/10.1186/1758-2946-3-3</bibtex:url>
     </bibtex:article>
   </bibtex:entry>
 
 
   <bibtex:entry bibtex:id="HEL99">
     <bibtex:inbook>
-      <bibtex:author>Helson, Harold E.</bibtex:author>
+      <bibtex:editor>Lipkowitz, K. B. and Boyd, D. B.</bibtex:editor>
+      <!-- FIXME: <bibtex:author>Helson, Harold E.</bibtex:author> –
+           here the schema is indeed to restrictive, we need both the
+           editor of the book and the author of the book chapter. -->
       <bibtex:title>Structure Diagram Generation</bibtex:title>
       <bibtex:pages>313-398</bibtex:pages>
       <bibtex:publisher>Wiley-VCH</bibtex:publisher>
       <bibtex:year>1999</bibtex:year>
       <bibtex:volume>13</bibtex:volume>
       <bibtex:series>Reviews in Computational Chemistry</bibtex:series>
-      <bibtex:editor>Lipkowitz, K. B. and Boyd, D. B.</bibtex:editor>
       <bibtex:address>New York</bibtex:address>
     </bibtex:inbook>
   </bibtex:entry>
   
-  <bibtex:entry bibtex:id="BGdV04a">
+  <bibtex:entry bibtex:id="BGDV04a">
     <bibtex:article>
       <bibtex:author>Berger, F. and Gritzmann, P. and De Vries, S.</bibtex:author>
       <bibtex:title>Minimum cycle bases for network graphs</bibtex:title>
@@ -669,16 +675,15 @@
       </bibtex:article>
   </bibtex:entry>
 
-  <bibtex:entry bibtex:id="kind2007">
+  <bibtex:entry bibtex:id="Kind2007">
       <bibtex:article>
           <bibtex:author>Kind, Tobias   and Fiehn, Oliver</bibtex:author>
-          <bibtex:crossref>DOI:10.1186/1471-2105-8-105</bibtex:crossref>
-          <bibtex:journal>BMC Bioinformatics</bibtex:journal>
-          <bibtex:year>2007</bibtex:year>
           <bibtex:title>Seven Golden Rules for heuristic filtering of molecular formulas
 obtained by accurate mass spectrometry</bibtex:title>
-          <bibtex:volume>8</bibtex:volume>
+          <bibtex:journal>BMC Bioinformatics</bibtex:journal>
           <bibtex:year>2007</bibtex:year>
+          <bibtex:volume>8</bibtex:volume>
+          <bibtex:crossref>DOI:10.1186/1471-2105-8-105</bibtex:crossref>
       </bibtex:article>
   </bibtex:entry>
 
@@ -708,8 +713,8 @@ obtained by accurate mass spectrometry</bibtex:title>
 
   <bibtex:entry bibtex:id="Kreher98">
       <bibtex:book>
-          <bibtex:title>Combinatorial Algorithms Generation Enumeration and Search</bibtex:title>
           <bibtex:author>Kreher, Donald and Stinson, Douglas</bibtex:author>
+          <bibtex:title>Combinatorial Algorithms Generation Enumeration and Search</bibtex:title>
           <bibtex:publisher>CRC Press</bibtex:publisher>
           <bibtex:year>1998</bibtex:year>
       </bibtex:book>
@@ -717,10 +722,10 @@ obtained by accurate mass spectrometry</bibtex:title>
   
   <bibtex:entry bibtex:id="Pluskal2012">
     <bibtex:article>
-      <bibtex:title>Highly accurate chemical formula prediction tool utilizing high-resolution mass spectra, MS/MS fragmentation, heuristic rules, and isotope pattern matching</bibtex:title>
       <bibtex:author>Pluskal, Tomas and Uehara, Taisuke and Yanagida, Mitsuhiro</bibtex:author>
-      <bibtex:year>2012</bibtex:year>
+      <bibtex:title>Highly accurate chemical formula prediction tool utilizing high-resolution mass spectra, MS/MS fragmentation, heuristic rules, and isotope pattern matching</bibtex:title>
       <bibtex:journal>Analytical Chemistry</bibtex:journal>
+      <bibtex:year>2012</bibtex:year>
       <bibtex:volume>84</bibtex:volume>
       <bibtex:number>10</bibtex:number>
       <bibtex:pages>4396-4403</bibtex:pages>
@@ -918,6 +923,7 @@ obtained by accurate mass spectrometry</bibtex:title>
       <bibtex:volume>41</bibtex:volume>
       <bibtex:number>6</bibtex:number>
       <bibtex:pages>1500-1507</bibtex:pages>
+      <bibtex:crossref>DOI:10.1021/ci000407n</bibtex:crossref>
       <bibtex:abstract>The program package SENECA for Computer-Assisted Structure
           Elucidation (CASE) of organic molecules is described.SENECA is written
           completely in the programming language Java and divided into a server, a client,
@@ -931,7 +937,6 @@ obtained by accurate mass spectrometry</bibtex:title>
           heterogeneous network of almost any number and type of computers, thus allowing
           for parallel CASE computations on ordinary networks, present in almost any
           institution.[References: 23]</bibtex:abstract>
-      <bibtex:crossref>DOI:10.1021/ci000407n</bibtex:crossref>
       <bibtex:keywords>Chemical-structure,Natural-products,Spectroscopy,Molecules,Search.,
           Chemistry in Current Contents(R)/Physical, Chemical and Earth,Sciences.</bibtex:keywords>
     </bibtex:article>
@@ -1009,14 +1014,16 @@ obtained by accurate mass spectrometry</bibtex:title>
 
   <bibtex:entry bibtex:id="TOD2000">
     <bibtex:inbook>
-      <bibtex:author>Todeschini, R. and Consonni, V.</bibtex:author>
-      <bibtex:title></bibtex:title>
-      <bibtex:journal>Persepectives in Drug Discovery and Design</bibtex:journal>
-      <bibtex:year>2000</bibtex:year>
       <bibtex:editor>Mannhold, R. and Kubinyi, H. and Timmermann, H.</bibtex:editor>
-      <bibtex:series>Methods and Principles in Medicinal Chemistry</bibtex:series>
-      <bibtex:volume>11</bibtex:volume>
+      <!-- FIXME: <bibtex:author>Todeschini, R. and Consonni,
+           V.</bibtex:author> – schema too restrictive, we need both
+           editor and author -->
+      <bibtex:title>Persepectives in Drug Discovery and Design</bibtex:title>
+      <bibtex:chapter></bibtex:chapter>
       <bibtex:publisher>Wiley-VCH</bibtex:publisher>
+      <bibtex:year>2000</bibtex:year>
+      <bibtex:volume>11</bibtex:volume>
+      <bibtex:series>Methods and Principles in Medicinal Chemistry</bibtex:series>
       <bibtex:address>Weinheim</bibtex:address>
     </bibtex:inbook>
   </bibtex:entry>
@@ -1341,16 +1348,16 @@ Method </bibtex:title>
         </bibtex:article>
     </bibtex:entry>
 
-	<bibtex:entry bibtex:id="SallerH1995">
-    <bibtex:inbook>
-      <bibtex:author>Saller, H.</bibtex:author>
-      <bibtex:title></bibtex:title>
-      <bibtex:pages></bibtex:pages>
-      <bibtex:year>1985</bibtex:year>
-      <bibtex:publisher>TU München</bibtex:publisher>
-      <bibtex:address>München</bibtex:address>
-    </bibtex:inbook>
-  </bibtex:entry>
+    <bibtex:entry bibtex:id="SallerH1995">
+      <bibtex:inbook>
+        <bibtex:author>Saller, H.</bibtex:author>
+        <bibtex:title></bibtex:title>
+        <bibtex:pages></bibtex:pages>
+        <bibtex:publisher>TU München</bibtex:publisher>
+        <bibtex:year>1985</bibtex:year>
+        <bibtex:address>München</bibtex:address>
+      </bibtex:inbook>
+    </bibtex:entry>
 
     <bibtex:entry bibtex:id="HALL1995">
         <bibtex:article>
@@ -1444,13 +1451,13 @@ Method </bibtex:title>
     </bibtex:entry>
 
     <bibtex:entry bibtex:id="WEGNER2006">
-        <bibtex:thesis>
+        <bibtex:phdthesis>
             <bibtex:author>Wegner, J. K.</bibtex:author>
             <bibtex:title>Data Mining und Graph Mining auf molekularen Graphen - Cheminformatik und molekulare Kodierungen f\"{u}r ADME/Tox QSAR Analysen</bibtex:title>
+            <bibtex:school>University of T{\"u}bingen</bibtex:school>
             <bibtex:year>2006</bibtex:year>
             <bibtex:isbn>3832513795</bibtex:isbn>
-            <bibtex:school>University of T{\"u}bingen</bibtex:school>
-        </bibtex:thesis>
+        </bibtex:phdthesis>
     </bibtex:entry>
 
   <bibtex:entry bibtex:id="WILLIGHAGEN2004">
@@ -1505,30 +1512,33 @@ Method </bibtex:title>
   </bibtex:entry>
 
   <bibtex:entry bibtex:id="Klekota01112008">
-  	<bibtex:article>
+    <bibtex:article>
       <bibtex:author>Klekota, Justin and Roth, Frederick P.</bibtex:author>
       <bibtex:title>Chemical substructures that enrich for biological activity</bibtex:title>
-      <bibtex:volume>24</bibtex:volume> 
-      <bibtex:number>21</bibtex:number> 
-      <bibtex:pages>2518-2525</bibtex:pages> 
-      <bibtex:year>2008</bibtex:year> 
-      <bibtex:crossref>DOI:10.1093/bioinformatics/btn479</bibtex:crossref>
-      <bibtex:URL>http://bioinformatics.oxfordjournals.org/content/24/21/2518.abstract</bibtex:URL> 
-      <bibtex:eprint>http://bioinformatics.oxfordjournals.org/content/24/21/2518.full.pdf+html</bibtex:eprint> 
       <bibtex:journal>Bioinformatics</bibtex:journal>
-  	</bibtex:article>
+      <bibtex:year>2008</bibtex:year> 
+      <bibtex:volume>24</bibtex:volume>
+      <bibtex:number>21</bibtex:number>
+      <bibtex:pages>2518-2525</bibtex:pages>
+      <!-- FIXME:
+           <bibtex:eprint>http://bioinformatics.oxfordjournals.org/content/24/21/2518.full.pdf+html</bibtex:eprint>
+           – 'eprint' is not listed as an allowed element in the
+           schema :( -->
+      <bibtex:crossref>DOI:10.1093/bioinformatics/btn479</bibtex:crossref>
+      <bibtex:url>http://bioinformatics.oxfordjournals.org/content/24/21/2518.abstract</bibtex:url> 
+    </bibtex:article>
   </bibtex:entry>
 
     <bibtex:entry bibtex:id="Ullmann76">
         <bibtex:article>
             <bibtex:author>Ullmann J R</bibtex:author>
             <bibtex:title>An Algorithm for Subgraph Isomorphism</bibtex:title>
-            <bibtex:year>1976</bibtex:year>
-            <bibtex:url>http://www.engr.uconn.edu/~vkk06001/GraphIsomorphism/Papers/Ullman_Algorithm.pdf</bibtex:url>
             <bibtex:journal>Journal of the Association for Computing Machinery</bibtex:journal>
+            <bibtex:year>1976</bibtex:year>
             <bibtex:volume>23</bibtex:volume>
             <bibtex:number>1</bibtex:number>
             <bibtex:crossref>DOI:10.1145/321921.321925</bibtex:crossref>
+            <bibtex:url>http://www.engr.uconn.edu/~vkk06001/GraphIsomorphism/Papers/Ullman_Algorithm.pdf</bibtex:url>
         </bibtex:article>
     </bibtex:entry>  
     
@@ -1536,22 +1546,22 @@ Method </bibtex:title>
     <bibtex:article>
       <bibtex:author>Vismara, Philippe</bibtex:author>
       <bibtex:title>Union of all the minimum cycle bases of a graph</bibtex:title>
-      <bibtex:year>1997</bibtex:year>
-      <bibtex:url>http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.3674</bibtex:url>
       <bibtex:journal>Combinatorics</bibtex:journal>
+      <bibtex:year>1997</bibtex:year>
       <bibtex:volume>4</bibtex:volume>
       <bibtex:number>1</bibtex:number>
+      <bibtex:url>http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.3674</bibtex:url>
     </bibtex:article>
   </bibtex:entry>
 
     <bibtex:entry bibtex:id="InChITechManual">
         <bibtex:manual>
-            <bibtex:title>IUPAC International Chemical Identifier (InChI), InChI
-                version 1, software version 1.04 (2011), Technical Manual
-            </bibtex:title>
             <bibtex:author>Stein, Stephen and Heller, Stephen and Tchekhovskoi,
                 Dmitrii and Pletnev, Igor
             </bibtex:author>
+            <bibtex:title>IUPAC International Chemical Identifier (InChI), InChI
+                version 1, software version 1.04 (2011), Technical Manual
+            </bibtex:title>
             <bibtex:year>2011</bibtex:year>
             <bibtex:url>
                 http://www.inchi-trust.org/fileadmin/user_upload/software/inchi-v1.04/InChI_TechMan.pdf
@@ -1561,10 +1571,10 @@ Method </bibtex:title>
 
     <bibtex:entry bibtex:id="Razinger93">
         <bibtex:article>
-            <bibtex:title>Stereoisomer Generation in Computer-Enhanced Structure Elucidation</bibtex:title>
             <bibtex:author>Razinger, Marko and Balasubramaniam, Krishnan and Perdih, Marko and Munk, Morton</bibtex:author>
-            <bibtex:year>1993</bibtex:year>
+            <bibtex:title>Stereoisomer Generation in Computer-Enhanced Structure Elucidation</bibtex:title>
             <bibtex:journal>J. Chem. Inf. Comput. Sci</bibtex:journal>
+            <bibtex:year>1993</bibtex:year>
             <bibtex:volume>33</bibtex:volume>
             <bibtex:pages>812-825</bibtex:pages>
             <bibtex:crossref>DOI:10.1021/ci00016a003</bibtex:crossref>
@@ -1585,10 +1595,10 @@ Method </bibtex:title>
     
     <bibtex:entry bibtex:id="OBoyle12">
         <bibtex:article>
-            <bibtex:title>Towards a Universal SMILES representation - A standard method to generate canonical SMILES based on the InChI</bibtex:title>
             <bibtex:author>O'Boyle, Noel</bibtex:author>
-            <bibtex:year>2012</bibtex:year>
+            <bibtex:title>Towards a Universal SMILES representation - A standard method to generate canonical SMILES based on the InChI</bibtex:title>
             <bibtex:journal>Journal of Cheminformatics</bibtex:journal>
+            <bibtex:year>2012</bibtex:year>
             <bibtex:volume>4</bibtex:volume>
             <bibtex:number>22</bibtex:number>
             <bibtex:crossref>DOI:10.1186/1758-2946-4-22</bibtex:crossref>
@@ -1597,10 +1607,10 @@ Method </bibtex:title>
     
     <bibtex:entry bibtex:id="Edmonds65">
         <bibtex:article>
-            <bibtex:title>Paths, trees and flowers</bibtex:title>
             <bibtex:author>Edmonds, Jack</bibtex:author>
-            <bibtex:year>1965</bibtex:year>
+            <bibtex:title>Paths, trees and flowers</bibtex:title>
             <bibtex:journal>Canad. J. Math.</bibtex:journal>
+            <bibtex:year>1965</bibtex:year>
             <bibtex:volume>17</bibtex:volume>
             <bibtex:number>449-467</bibtex:number>
         </bibtex:article>
@@ -1608,10 +1618,10 @@ Method </bibtex:title>
     
      <bibtex:entry bibtex:id="Pluskal2012">
         <bibtex:article>
-            <bibtex:title>Highly accurate chemical formula prediction tool utilizing high-resolution mass spectra, MS/MS fragmentation, heuristic rules, and isotope pattern matching</bibtex:title>
             <bibtex:author>Pluskal, Tomas and Uehara, Taisuke and Yanagida, Mitsuhiro</bibtex:author>
-            <bibtex:year>2012</bibtex:year>
+            <bibtex:title>Highly accurate chemical formula prediction tool utilizing high-resolution mass spectra, MS/MS fragmentation, heuristic rules, and isotope pattern matching</bibtex:title>
             <bibtex:journal>Analytical Chemistry</bibtex:journal>
+            <bibtex:year>2012</bibtex:year>
             <bibtex:volume>84</bibtex:volume>
             <bibtex:number>10</bibtex:number>
             <bibtex:pages>4396-4403</bibtex:pages>
@@ -1620,10 +1630,10 @@ Method </bibtex:title>
 
     <bibtex:entry bibtex:id="Boecker2008">
         <bibtex:article>
-            <bibtex:title>DECOMP--from interpreting Mass Spectrometry peaks to solving the Money Changing Problem.</bibtex:title>
             <bibtex:author>Böcker, Sebastian and Lipták, Zsuzsanna and Martin, Marcel and Pervukhin, Anton and Sudek, Henner</bibtex:author>
-            <bibtex:year>2008</bibtex:year>
+            <bibtex:title>DECOMP--from interpreting Mass Spectrometry peaks to solving the Money Changing Problem.</bibtex:title>
             <bibtex:journal>Bioinformatics</bibtex:journal>
+            <bibtex:year>2008</bibtex:year>
             <bibtex:volume>24</bibtex:volume>
             <bibtex:number>4</bibtex:number>
             <bibtex:pages>591--593</bibtex:pages>
@@ -1634,8 +1644,8 @@ Method </bibtex:title>
         <bibtex:inproceedings>
             <bibtex:author>Dührkop, Kai and Ludwig, Marcus and Meusel, Marvin and Böcker, Sebastian</bibtex:author>
             <bibtex:title>Faster mass decomposition</bibtex:title>
-            <bibtex:year>2013</bibtex:year>
             <bibtex:booktitle>Proc. of Workshop on Algorithms in Bioinformatics (WABI 2013)</bibtex:booktitle>
+            <bibtex:year>2013</bibtex:year>
             <bibtex:url>http://arxiv.org/abs/1307.7805</bibtex:url>
         </bibtex:inproceedings>
     </bibtex:entry>

@@ -313,7 +313,7 @@
       <bibtex:volume>43</bibtex:volume>
       <bibtex:number>20</bibtex:number>
       <bibtex:pages>3714-3717</bibtex:pages>
-      <bibtex:doi>10.1021/jm000942e</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/jm000942e</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
 
@@ -379,7 +379,7 @@
       <bibtex:volume>5</bibtex:volume>
       <bibtex:number>6</bibtex:number>
       <bibtex:pages>345</bibtex:pages>
-      <bibtex:doi>10.1145/367766.368168</bibtex:doi>
+      <bibtex:crossref>DOI:10.1145/367766.368168</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
 
@@ -426,7 +426,7 @@
       <bibtex:year>2006</bibtex:year>
       <bibtex:volume>46</bibtex:volume>
       <bibtex:pages>991-998</bibtex:pages>
-      <bibtex:doi>10.1021/ci050400b</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/ci050400b</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
 
@@ -539,7 +539,7 @@
       <bibtex:pages>1-14</bibtex:pages>
       <bibtex:number>1</bibtex:number>
       <bibtex:url>https://doi.org/10.1186/1758-2946-3-3</bibtex:url>
-      <bibtex:doi>10.1186/1758-2946-3-3</bibtex:doi>
+      <bibtex:crossref>DOI:10.1186/1758-2946-3-3</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
 
@@ -672,7 +672,7 @@
   <bibtex:entry bibtex:id="kind2007">
       <bibtex:article>
           <bibtex:author>Kind, Tobias   and Fiehn, Oliver</bibtex:author>
-          <bibtex:doi>10.1186/1471-2105-8-105</bibtex:doi>
+          <bibtex:crossref>DOI:10.1186/1471-2105-8-105</bibtex:crossref>
           <bibtex:journal>BMC Bioinformatics</bibtex:journal>
           <bibtex:year>2007</bibtex:year>
           <bibtex:title>Seven Golden Rules for heuristic filtering of molecular formulas
@@ -858,7 +858,7 @@ obtained by accurate mass spectrometry</bibtex:title>
       <bibtex:volume>43</bibtex:volume>
       <bibtex:number>3</bibtex:number>
       <bibtex:pages>757-772</bibtex:pages>
-      <bibtex:doi>10.1021/ci0256541</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/ci0256541</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
 
@@ -879,7 +879,7 @@ obtained by accurate mass spectrometry</bibtex:title>
       <bibtex:volume>44</bibtex:volume>
       <bibtex:number>2</bibtex:number>
       <bibtex:pages>462-469</bibtex:pages>
-      <bibtex:doi>10.1021/ci034244p</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/ci034244p</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
 
@@ -931,7 +931,7 @@ obtained by accurate mass spectrometry</bibtex:title>
           heterogeneous network of almost any number and type of computers, thus allowing
           for parallel CASE computations on ordinary networks, present in almost any
           institution.[References: 23]</bibtex:abstract>
-      <bibtex:doi>10.1021/ci000407n</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/ci000407n</bibtex:crossref>
       <bibtex:keywords>Chemical-structure,Natural-products,Spectroscopy,Molecules,Search.,
           Chemistry in Current Contents(R)/Physical, Chemical and Earth,Sciences.</bibtex:keywords>
     </bibtex:article>
@@ -945,7 +945,7 @@ obtained by accurate mass spectrometry</bibtex:title>
       <bibtex:year>2002</bibtex:year>
       <bibtex:volume>43</bibtex:volume>
       <bibtex:number>6</bibtex:number>
-      <bibtex:doi>10.1021/ci0341363</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/ci0341363</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
 
@@ -957,7 +957,7 @@ obtained by accurate mass spectrometry</bibtex:title>
       <bibtex:year>2003</bibtex:year>
       <bibtex:volume>43</bibtex:volume>
       <bibtex:pages>493-500</bibtex:pages>
-      <bibtex:doi>10.1021/ci025584y</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/ci025584y</bibtex:crossref>
       <bibtex:url>http://www.cdk.org/</bibtex:url>
     </bibtex:article>
   </bibtex:entry>
@@ -970,7 +970,7 @@ obtained by accurate mass spectrometry</bibtex:title>
       <bibtex:year>2009</bibtex:year>
       <bibtex:volume>49</bibtex:volume>
       <bibtex:pages>338–347</bibtex:pages>
-      <bibtex:doi>10.1021/ci800326z</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/ci800326z</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
 
@@ -993,7 +993,7 @@ obtained by accurate mass spectrometry</bibtex:title>
       <bibtex:year>2006</bibtex:year>
       <bibtex:volume>46</bibtex:volume>
       <bibtex:pages>1912-1918</bibtex:pages>
-      <bibtex:doi>10.1021/ci6002152</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/ci6002152</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
 
@@ -1285,7 +1285,7 @@ Method </bibtex:title>
           <bibtex:volume>7</bibtex:volume>
           <bibtex:number>8</bibtex:number>
           <bibtex:pages>1118-1126</bibtex:pages>
-          <bibtex:doi>10.1002/smll.201002366</bibtex:doi>
+          <bibtex:crossref>DOI:10.1002/smll.201002366</bibtex:crossref>
       </bibtex:article>
   </bibtex:entry>
 
@@ -1324,7 +1324,7 @@ Method </bibtex:title>
             <bibtex:year>1986</bibtex:year>
             <bibtex:volume>7</bibtex:volume>
             <bibtex:pages>565-577</bibtex:pages>
-            <bibtex:doi>10.1002/jcc.540070419</bibtex:doi>
+            <bibtex:crossref>DOI:10.1002/jcc.540070419</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1337,7 +1337,7 @@ Method </bibtex:title>
             <bibtex:year>1987</bibtex:year>
             <bibtex:volume>27</bibtex:volume>
             <bibtex:pages>21-35</bibtex:pages>
-            <bibtex:doi>10.1021/ci00053a005</bibtex:doi>
+            <bibtex:crossref>DOI:10.1021/ci00053a005</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1361,7 +1361,7 @@ Method </bibtex:title>
             <bibtex:year>1995</bibtex:year>
             <bibtex:volume>35</bibtex:volume>
             <bibtex:pages>1039-1045</bibtex:pages>
-            <bibtex:doi>10.1021/ci00028a014</bibtex:doi>
+            <bibtex:crossref>DOI:10.1021/ci00028a014</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1377,7 +1377,7 @@ Method </bibtex:title>
             <bibtex:year>2004</bibtex:year>
             <bibtex:volume>9</bibtex:volume>
             <bibtex:pages>1004-1009</bibtex:pages>
-            <bibtex:doi>10.3390/91201004</bibtex:doi>
+            <bibtex:crossref>DOI:10.3390/91201004</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1391,7 +1391,7 @@ Method </bibtex:title>
             <bibtex:year>2000</bibtex:year>
             <bibtex:volume>18</bibtex:volume>
             <bibtex:pages>464-477</bibtex:pages>
-            <bibtex:doi>10.1016/S1093-3263(00)00068-1</bibtex:doi>
+            <bibtex:crossref>DOI:10.1016/S1093-3263(00)00068-1</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry> 
 
@@ -1403,7 +1403,7 @@ Method </bibtex:title>
             <bibtex:year>2006</bibtex:year>
             <bibtex:volume>78</bibtex:volume>
             <bibtex:pages>1897-1970</bibtex:pages>
-            <bibtex:doi>10.1351/pac200678101897</bibtex:doi>
+            <bibtex:crossref>DOI:10.1351/pac200678101897</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1415,7 +1415,7 @@ Method </bibtex:title>
             <bibtex:year>2009</bibtex:year>
             <bibtex:volume>1</bibtex:volume>
             <bibtex:pages>12</bibtex:pages>
-            <bibtex:doi>10.1186/1758-2946-1-12</bibtex:doi>
+            <bibtex:crossref>DOI:10.1186/1758-2946-1-12</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1427,7 +1427,7 @@ Method </bibtex:title>
             <bibtex:year>2010</bibtex:year>
             <bibtex:volume>ASAP</bibtex:volume>
             <bibtex:pages></bibtex:pages>
-            <bibtex:doi>10.1021/jm1008456</bibtex:doi>
+            <bibtex:crossref>DOI:10.1021/jm1008456</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1439,7 +1439,7 @@ Method </bibtex:title>
             <bibtex:year>2005</bibtex:year>
             <bibtex:volume>45</bibtex:volume>
             <bibtex:pages>386-393</bibtex:pages>
-            <bibtex:doi>10.1021/ci0496797</bibtex:doi>
+            <bibtex:crossref>DOI:10.1021/ci0496797</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
 
@@ -1474,7 +1474,7 @@ Method </bibtex:title>
       <bibtex:volume>68</bibtex:volume>
       <bibtex:number>19</bibtex:number>
       <bibtex:pages>7368-7373</bibtex:pages>
-      <bibtex:doi>10.1021/jo034808o</bibtex:doi>
+      <bibtex:crossref>DOI:10.1021/jo034808o</bibtex:crossref>
     </bibtex:article>
   </bibtex:entry>
    
@@ -1486,7 +1486,7 @@ Method </bibtex:title>
             <bibtex:year>2010</bibtex:year>
             <bibtex:volume>50</bibtex:volume>
             <bibtex:pages>1223-1232</bibtex:pages>
-            <bibtex:doi>10.1021/ci1001179</bibtex:doi>
+            <bibtex:crossref>DOI:10.1021/ci1001179</bibtex:crossref>
         </bibtex:article>
    </bibtex:entry>
    
@@ -1499,7 +1499,7 @@ Method </bibtex:title>
       <bibtex:volume></bibtex:volume>
       <bibtex:number></bibtex:number>
       <bibtex:pages></bibtex:pages>
-      <bibtex:doi>10.1093/bioinformatics/btr409</bibtex:doi>
+      <bibtex:crossref>DOI:10.1093/bioinformatics/btr409</bibtex:crossref>
     </bibtex:article>
     
   </bibtex:entry>
@@ -1512,7 +1512,7 @@ Method </bibtex:title>
       <bibtex:number>21</bibtex:number> 
       <bibtex:pages>2518-2525</bibtex:pages> 
       <bibtex:year>2008</bibtex:year> 
-      <bibtex:doi>10.1093/bioinformatics/btn479</bibtex:doi>
+      <bibtex:crossref>DOI:10.1093/bioinformatics/btn479</bibtex:crossref>
       <bibtex:URL>http://bioinformatics.oxfordjournals.org/content/24/21/2518.abstract</bibtex:URL> 
       <bibtex:eprint>http://bioinformatics.oxfordjournals.org/content/24/21/2518.full.pdf+html</bibtex:eprint> 
       <bibtex:journal>Bioinformatics</bibtex:journal>
@@ -1528,7 +1528,7 @@ Method </bibtex:title>
             <bibtex:journal>Journal of the Association for Computing Machinery</bibtex:journal>
             <bibtex:volume>23</bibtex:volume>
             <bibtex:number>1</bibtex:number>
-            <bibtex:doi>10.1145/321921.321925</bibtex:doi>
+            <bibtex:crossref>DOI:10.1145/321921.321925</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>  
     
@@ -1567,7 +1567,7 @@ Method </bibtex:title>
             <bibtex:journal>J. Chem. Inf. Comput. Sci</bibtex:journal>
             <bibtex:volume>33</bibtex:volume>
             <bibtex:pages>812-825</bibtex:pages>
-            <bibtex:doi>10.1021/ci00016a003</bibtex:doi>
+            <bibtex:crossref>DOI:10.1021/ci00016a003</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
     
@@ -1579,7 +1579,7 @@ Method </bibtex:title>
              <bibtex:year>2010</bibtex:year>
              <bibtex:volume>50</bibtex:volume>
              <bibtex:pages>742-754</bibtex:pages>
-             <bibtex:doi>10.1021/ci100050t</bibtex:doi>
+             <bibtex:crossref>DOI:10.1021/ci100050t</bibtex:crossref>
          </bibtex:article>
     </bibtex:entry>
     
@@ -1591,7 +1591,7 @@ Method </bibtex:title>
             <bibtex:journal>Journal of Cheminformatics</bibtex:journal>
             <bibtex:volume>4</bibtex:volume>
             <bibtex:number>22</bibtex:number>
-            <bibtex:doi>10.1186/1758-2946-4-22</bibtex:doi>
+            <bibtex:crossref>DOI:10.1186/1758-2946-4-22</bibtex:crossref>
         </bibtex:article>
     </bibtex:entry>
     

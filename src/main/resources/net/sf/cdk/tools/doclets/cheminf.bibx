@@ -55,8 +55,8 @@
     <bibtex:inproceedings>
       <bibtex:author>Colin Batchelor and Ken Karapetyan and Valery Tkachenko and Anthony Williams</bibtex:author>
       <bibtex:title>Validation and standardization of molecular structures in general and sugars in particular: a case study</bibtex:title>
-      <bibtex:year>2013</bibtex:year>
       <bibtex:booktitle>6th Joint Sheffield Conference on Chemoinformatics</bibtex:booktitle>
+      <bibtex:year>2013</bibtex:year>
       <bibtex:url>http://www.slideshare.net/RSC-Chemistry/20130724-cisrg-sugarsbatchelor</bibtex:url>
     </bibtex:inproceedings>
   </bibtex:entry>

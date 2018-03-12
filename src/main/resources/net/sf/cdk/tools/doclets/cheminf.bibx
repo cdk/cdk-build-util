@@ -1520,12 +1520,46 @@ Method </bibtex:title>
       <bibtex:volume>24</bibtex:volume>
       <bibtex:number>21</bibtex:number>
       <bibtex:pages>2518-2525</bibtex:pages>
-      <!-- FIXME:
-           <bibtex:eprint>http://bioinformatics.oxfordjournals.org/content/24/21/2518.full.pdf+html</bibtex:eprint>
-           – 'eprint' is not listed as an allowed element in the
-           schema :( -->
       <bibtex:crossref>DOI:10.1093/bioinformatics/btn479</bibtex:crossref>
-      <bibtex:url>http://bioinformatics.oxfordjournals.org/content/24/21/2518.abstract</bibtex:url> 
+      <bibtex:abstract>
+        From: http://bioinformatics.oxfordjournals.org/content/24/21/2518.abstract
+
+        License: Creative Commons Attribution Non-Commercial
+        License (http://creativecommons.org/licenses/by-nc/2.0/uk/)
+
+        Motivation: Certain chemical substructures are present
+        in many drugs. This has led to the claim of ‘privileged’
+        substructures which are predisposed to
+        bioactivity. Because bias in screening library
+        construction could explain this phenomenon, the
+        existence of privilege has been controversial.
+
+        Results: Using diverse phenotypic assays, we defined
+        bioactivity for multiple compound libraries. Many
+        substructures were associated with bioactivity even
+        after accounting for substructure prevalence in the
+        library, thus validating the privileged substructure
+        concept. Determinations of privilege were confirmed in
+        independent assays and libraries. Our analysis also
+        revealed ‘underprivileged’ substructures and
+        ‘conditional privilege’—rules relating combinations of
+        substructure to bioactivity. Most previously reported
+        substructures have been flat aromatic ring
+        systems. Although we validated such substructures, we
+        also identified three-dimensional privileged
+        substructures. Most privileged substructures display a
+        wide variety of substituents suggesting an entropic
+        mechanism of privilege. Compounds containing privileged
+        substructures had a doubled rate of bioactivity,
+        suggesting practical consequences for pharmaceutical
+        discovery.
+
+        Contact:fritz_roth@hms.harvard.edu
+
+        Supplementary information:Supplementary data are
+        available at Bioinformatics online.
+      </bibtex:abstract>
+      <bibtex:url>http://bioinformatics.oxfordjournals.org/content/24/21/2518.full.pdf+html</bibtex:url>
     </bibtex:article>
   </bibtex:entry>
 

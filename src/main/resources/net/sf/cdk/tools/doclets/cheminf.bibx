@@ -564,17 +564,6 @@
     </bibtex:inbook>
   </bibtex:entry>
   
-  <bibtex:entry bibtex:id="BGdV04c">
-    <bibtex:article>
-      <bibtex:author>Berger, F. and Gritzmann, P. and De Vries, S.</bibtex:author>
-      <bibtex:title>Minimum cycle bases for network graphs</bibtex:title>
-      <bibtex:journal>Algorithmica</bibtex:journal>
-      <bibtex:year>2004</bibtex:year>
-      <bibtex:number>1</bibtex:number>
-      <bibtex:pages>51-62</bibtex:pages>
-    </bibtex:article>
-  </bibtex:entry>
-
   <bibtex:entry bibtex:id="HEL01">
     <bibtex:article>
       <bibtex:author>Stein, S. and Heller, S.</bibtex:author>

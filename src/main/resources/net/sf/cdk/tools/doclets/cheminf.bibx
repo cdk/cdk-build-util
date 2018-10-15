@@ -1661,5 +1661,17 @@ Method </bibtex:title>
         </bibtex:inproceedings>
     </bibtex:entry>
     
-    
+    <bibtex:entry id="Lovering2009">
+        <bibtex:article>
+            <bibtex:title>Escape from Flatland: Increasing Saturation as an Approach to Improving Clinical Success</bibtex:title>
+            <bibtex:author>Lovering, Frank and Bikker, Jack and Humblet, Christine</bibtex:author>
+            <bibtex:year>2009</bibtex:year>
+            <bibtex:journal>J. Med. Chem.</bibtex:journal>
+            <bibtex:volume>52</bibtex:volume>
+            <bibtex:number>21</bibtex:number>
+            <bibtex:pages>6752-6756</bibtex:pages>
+            <bibtex:url>http://pubs.acs.org/doi/abs/10.1021/jm901241e</bibtex:url>
+        </bibtex:article>
+    </bibtex:entry>
+
 </bibtex:file>

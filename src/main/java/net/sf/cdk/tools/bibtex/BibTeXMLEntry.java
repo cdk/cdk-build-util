@@ -26,6 +26,7 @@ import nu.xom.Element;
 import nu.xom.Node;
 import nu.xom.Nodes;
 import nu.xom.XPathContext;
+import java.net.URLEncoder;
 
 /**
  * This is a tool that creates HTML for a subset of the entry types
@@ -58,9 +59,9 @@ public class BibTeXMLEntry {
 				getString(article, "author", "?Authors?"),
 				getString(article, "title", "?Title?"),
 				getString(article, "journal", "?Journal?"),
-				getString(article, "year", "19??"),
-				getString(article, "volume", "?"),
-				getString(article, "pages", "?-?"),
+				getString(article, "year", null),
+				getString(article, "volume", null),
+				getString(article, "pages", null),
 				getString(article, "doi", null)
 			);
 		}
@@ -134,7 +135,7 @@ public class BibTeXMLEntry {
 	private String formatInBook(String authors, String title, String chapter,
 			String year, String volume, String series, String editor,
 			String pages, String doi) {
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		buffer.append(authors).append(", <i>").append(title).append("</i>, ");
 		buffer.append(series).append(", Ch. ").append(chapter);
 		buffer.append(", <b>").append(year).append("</b>, ");
@@ -144,20 +145,44 @@ public class BibTeXMLEntry {
 		return buffer.toString();
 	}
 
-	private void optionallyAppendDOI(String doi, StringBuffer buffer) {
+	private void optionallyAppendDOI(String doi, StringBuilder buffer) {
 		if (doi == null) return;
-		buffer.append(", doi:<a href=\"http://dx.doi.org/")
+		buffer.append(", <a href=\"http://dx.doi.org/")
 		    .append(doi).append("\">").append(doi).append("</a>");
 	}
 
 	protected String formatArticle(String authors, String title, String journal, String year,
 			String volume, String pages, String doi) {
-		StringBuffer buffer = new StringBuffer();
-		buffer.append(authors).append(", <i>").append(title).append("</i>, ");
-		buffer.append(journal).append(", <b>").append(year).append("</b>, ");
-		buffer.append(volume).append(":").append(pages);
-		optionallyAppendDOI(doi, buffer);
-		return buffer.toString();
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(authors).append(". ")
+		  .append(title).append(". ")
+		  .append(journal).append(". ")
+		  .append(year).append(". ");
+		if (volume != null)  
+		  sb.append(volume).append(". ");
+		if (pages != null)
+		  sb.append(pages);
+		String searchString = sb.toString();
+		sb.setLength(0);
+
+		String[] parts = authors.split(" and ");
+		if (parts.length > 2) {
+			authors = parts[0] + " <i>et. al.</i>";
+		}
+
+		sb.append("<a ");
+		sb.append(" target=\"_blank\" ");
+		sb.append("href=\"https://www.google.co.uk/search?q=");
+		sb.append(URLEncoder.encode(searchString));
+		sb.append("\">");
+		sb.append(authors).append(". ");
+		sb.append("<b>").append(journal).append("</b>. ");
+		sb.append(year).append(". ");
+		sb.append(volume);
+		sb.append("</a>");
+		optionallyAppendDOI(doi, sb);
+		return sb.toString();
 	}
 	
 	protected String formatMisc(String authors, String title) {

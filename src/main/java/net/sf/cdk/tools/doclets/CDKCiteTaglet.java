@@ -104,7 +104,7 @@ public class CDKCiteTaglet implements Taglet {
     }
 
     public String toString(Tag tag) {
-        return "[" + expandCitation(tag.text()) + "]";
+        return "(" + expandCitation(tag.text()) + ")";
     }
     
     public String toString(Tag[] tags) {

@@ -1,4 +1,4 @@
-/* Copyright (C) 2007,2011  Egon Willighagen <egonw@users.sf.net>
+/* Copyright (C) 2007,2011,2019  Egon Willighagen <egonw@users.sf.net>
  * 
  * Contact: cdk-devel@lists.sourceforge.net
  * 
@@ -147,7 +147,7 @@ public class BibTeXMLEntry {
 
 	private void optionallyAppendDOI(String doi, StringBuilder buffer) {
 		if (doi == null) return;
-		buffer.append(", <a href=\"http://dx.doi.org/")
+		buffer.append(", <a href=\"https://doi.org/")
 		    .append(doi).append("\">").append(doi).append("</a>");
 	}
 

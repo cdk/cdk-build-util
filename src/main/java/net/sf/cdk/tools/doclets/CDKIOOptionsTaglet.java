@@ -39,95 +39,94 @@ import java.util.Set;
  */
 public class CDKIOOptionsTaglet implements Taglet {
 
-    private static final String NAME = "cdk.iooptions";
+  private static final String NAME = "cdk.iooptions";
 
 
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public String getName() {
-        return NAME;
-    }
+  /**
+   * @inheritDoc
+   */
+  @Override
+  public String getName() {
+    return NAME;
+  }
 
-    @Override
-    public Set<Location> getAllowedLocations() {
-        return EnumSet.of(Location.TYPE);
-    }
+  @Override
+  public Set<Location> getAllowedLocations() {
+    return EnumSet.of(Location.TYPE);
+  }
 
-    @Override
-    public boolean isInlineTag() {
-        return false;
-    }
+  @Override
+  public boolean isInlineTag() {
+    return false;
+  }
 
-    /**
-     * Constructs a HTML table row (tr) for the given IO Setting. The row
-     * consist of a cell for the setting name and a cell with the question
-     * associated with that setting.
-     *
-     * @param setting instance of an IO Setting (should not be null)
-     * @return the table row
-     *
-     */
-    private static String getRow(IOSetting setting){
-        StringBuilder row = new StringBuilder();
-        row.append("<tr>");
-        row.append("<td><b>").append(setting.getName()).append("</b></td>");
-        row.append("<td>").append(setting.getQuestion()).append("</td>");
-        row.append("<td>").append(setting.getDefaultSetting()).append("</td>");
-        row.append("</tr>");
-        return row.toString();
-    }
+  /**
+   * Constructs a HTML table row (tr) for the given IO Setting. The row
+   * consist of a cell for the setting name and a cell with the question
+   * associated with that setting.
+   *
+   * @param setting instance of an IO Setting (should not be null)
+   * @return the table row
+   */
+  private static String getRow(IOSetting setting) {
+    StringBuilder row = new StringBuilder();
+    row.append("<tr>");
+    row.append("<td><b>").append(setting.getName()).append("</b></td>");
+    row.append("<td>").append(setting.getQuestion()).append("</td>");
+    row.append("<td>").append(setting.getDefaultSetting()).append("</td>");
+    row.append("</tr>");
+    return row.toString();
+  }
 
-    /**
-     * @inheritDoc
-     */
-    public String toString(String name) {
-        StringBuilder tableContent = new StringBuilder();
-        try {
+  /**
+   * @inheritDoc
+   */
+  public String toString(String name) {
+    StringBuilder tableContent = new StringBuilder();
+    try {
 
-            // get the class name and try invoking the default constructor
-            Class  c        = Class.forName(name);
-			Object instance = c.newInstance();
+      // get the class name and try invoking the default constructor
+      Class c = Class.forName(name);
+      Object instance = c.newInstance();
 
-            // ensures the tag is on an IChemObjectIO
-			if (instance instanceof IChemObjectIO) {
-                tableContent.append("<dt><b>IO options:</b><dd>");
-				IChemObjectIO objectIO = (IChemObjectIO)instance;
-				if (objectIO.getIOSettings().length == 0) return "";
-	    		tableContent.append("<table>");
-                tableContent.append("<tr><th>Name</th><th>Question</th><th>Default</th></tr>");
-	    		for (IOSetting setting : objectIO.getIOSettings()) {
-                    if(setting != null) {
-                        tableContent.append(getRow(setting));
-                    } else {
-                        System.err.println("[IOOptionsTaglet] Null IOSetting in class: " + name);
-                    }
-	    		}
-	    		tableContent.append("</table>");
-                tableContent.append("</dd></dt>");
-			} else {
-                System.err.println(name + " is not an instance of IChemObjectIO");
-            }
-
-		} catch (ClassNotFoundException ex){
-            System.err.println("[IOOptionsTaglet] Unable to find: " + name);
-        } catch (InstantiationException ex) {
-			System.err.println("[IOOptionsTaglet] Unable to create an instance of: "
-                               + name + ". Does this class have a default constructor?");
-		} catch (IllegalAccessException ex){
-            System.err.println("[IOOptionsTaglet] Default constructor for " + name
-                               +" was not accessible from this package (i.e. private/protected)");
+      // ensures the tag is on an IChemObjectIO
+      if (instance instanceof IChemObjectIO) {
+        tableContent.append("<dt><b>IO options:</b><dd>");
+        IChemObjectIO objectIO = (IChemObjectIO) instance;
+        if (objectIO.getIOSettings().length == 0) return "";
+        tableContent.append("<table>");
+        tableContent.append("<tr><th>Name</th><th>Question</th><th>Default</th></tr>");
+        for (IOSetting setting : objectIO.getIOSettings()) {
+          if (setting != null) {
+            tableContent.append(getRow(setting));
+          } else {
+            System.err.println("[IOOptionsTaglet] Null IOSetting in class: " + name);
+          }
         }
+        tableContent.append("</table>");
+        tableContent.append("</dd></dt>");
+      } else {
+        System.err.println(name + " is not an instance of IChemObjectIO");
+      }
 
-    	return tableContent.toString();
-
+    } catch (ClassNotFoundException ex) {
+      System.err.println("[IOOptionsTaglet] Unable to find: " + name);
+    } catch (InstantiationException ex) {
+      System.err.println("[IOOptionsTaglet] Unable to create an instance of: "
+                         + name + ". Does this class have a default constructor?");
+    } catch (IllegalAccessException ex) {
+      System.err.println("[IOOptionsTaglet] Default constructor for " + name
+                         + " was not accessible from this package (i.e. private/protected)");
     }
 
-    @Override
-    public String toString(List<? extends DocTree> tags, Element element) {
-        if (element.getKind() != ElementKind.CLASS)
-            return "";
-        return toString(element.toString());
-    }
+    return tableContent.toString();
+
+  }
+
+  @Override
+  public String toString(List<? extends DocTree> tags, Element element) {
+    if (element.getKind() != ElementKind.CLASS)
+      return "";
+    return toString(element.toString());
+  }
 }

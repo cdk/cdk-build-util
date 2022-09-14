@@ -1,5 +1,5 @@
 /* $Revision: 7973 $ $Author: egonw $ $Date: 2007-02-19 13:16:03 +0100 (Mon, 19 Feb 2007) $
- * 
+ *
  * Copyright (C) 2007  Egon Willighagen <egonw@users.sf.net>
  *
  * This program is free software; you can redistribute it and/or
@@ -18,13 +18,19 @@
  */
 package net.sf.cdk.tools.doclets;
 
-import java.util.Map;
+import com.sun.source.doctree.DocTree;
+import com.sun.source.util.DocTrees;
+import com.sun.source.util.TreePath;
+import jdk.javadoc.doclet.Doclet;
+import jdk.javadoc.doclet.DocletEnvironment;
+import jdk.javadoc.doclet.Taglet;
+
+import javax.lang.model.element.Element;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import com.sun.javadoc.SourcePosition;
-import com.sun.javadoc.Tag;
-import com.sun.tools.doclets.Taglet;
 
 /**
  * Source for the cdk.githash JavaDoc tag. When a class is tagged with this
@@ -36,92 +42,66 @@ import com.sun.tools.doclets.Taglet;
  * </pre>
  */
 public class CDKGitTaglet implements Taglet {
-    
-    private static final String NAME = "cdk.githash";
-    private final static Pattern pathPattern = Pattern.compile("^(src/.*\\.java)");
-    private final String BRANCH = "master";
-    
-    public String getName() {
-        return NAME;
-    }
-    
-    public boolean inField() {
-        return false;
-    }
 
-    public boolean inConstructor() {
-        return false;
-    }
-    
-    public boolean inMethod() {
-        return false;
-    }
-    
-    public boolean inOverview() {
-        return false;
-    }
+  private static final String NAME = "cdk.githash";
+  private final static Pattern pattern = Pattern.compile("([-_A-Za-z0-9]+/[-_A-Za-z0-9]+/src/main/.+.java)$");
+  private final String BRANCH = "main";
+  private DocTrees docTrees;
 
-    public boolean inPackage() {
-        return false;
-    }
+  public String getName() {
+    return NAME;
+  }
 
-    public boolean inType() {
-        return true;
-    }
-    
-    public boolean isInlineTag() {
-        return false;
-    }
-    
-    public static void register(Map<String, CDKGitTaglet> tagletMap) {
-       CDKGitTaglet tag = new CDKGitTaglet();
-       Taglet t = (Taglet) tagletMap.get(tag.getName());
-       if (t != null) {
-           tagletMap.remove(tag.getName());
-       }
-       tagletMap.put(tag.getName(), tag);
-    }
+  @Override
+  public Set<Location> getAllowedLocations() {
+    return EnumSet.of(Location.TYPE);
+  }
 
-    public String toString(Tag tag) {
-        return "<DT><B>Source code: </B><DD>"
-               + expand(tag) + "</DD>\n";
-    }
-    
-    public String toString(Tag[] tags) {
-        if (tags.length == 0) {
-            return null;
-        } else {
-            return toString(tags[0]);
-        }
-    }
+  @Override
+  public boolean isInlineTag() {
+    return false;
+  }
 
-    private String expand(Tag tag) {
-    	// create the URL
-    	SourcePosition file = tag.position();
-    	String pathAndFile = file.file().toString();
-    	pathAndFile = pathAndFile.substring(pathAndFile.indexOf("src/main"));
-    	pathAndFile = correctSlashes(pathAndFile);
-    	Matcher matcher = pathPattern.matcher(pathAndFile);
-    	if (matcher.matches()) {
-    		String url = "https://github.com/cdk/cdk/tree/" + BRANCH + "/" + 
-    				matcher.group(1);
-        	return "<a href=\"" + url + "\" target=\"_blank\">" + BRANCH + "</a>";
-    	} else {
-    		System.out.println("Could not resolve class name from: " + pathAndFile);
-    	}
-    	return "";
-    }
+  @Override
+  public String toString(List<? extends DocTree> tags, Element element) {
+    return toString(tags.toArray(new DocTree[0]), element);
+  }
 
-	private String correctSlashes(String absolutePath) {
-		StringBuffer buffer = new StringBuffer();
-		for (int i=0; i<absolutePath.length(); i++) {
-			char character = absolutePath.charAt(i); 
-			if (character == '\\') {
-				buffer.append('/');
-			} else {
-				buffer.append(character);
-			}
-		}
-		return buffer.toString();
-	}
+  public String toString(DocTree tag, Element e) {
+    return "<DT><B>Source code: </B><DD>"
+           + expand(tag, e) + "</DD>\n";
+  }
+
+  public String toString(DocTree[] tags, Element e) {
+    if (tags.length == 0) {
+      return null;
+    } else {
+      return toString(tags[0], e);
+    }
+  }
+
+  @Override
+  public void init(DocletEnvironment env, Doclet doclet) {
+    Taglet.super.init(env, doclet);
+    docTrees = env.getDocTrees();
+  }
+
+  private String expand(DocTree tag, Element e) {
+
+
+    // see https://openjdk.org/groups/compiler/using-new-doclet.html
+    TreePath path = docTrees.getPath(e);
+    if (path != null) {
+      String pathAndFile = path.getCompilationUnit().getSourceFile().getName().replaceAll("\\\\", "/");
+      Matcher matcher = pattern.matcher(pathAndFile);
+      if (matcher.find()) {
+        String url = "https://github.com/cdk/cdk/tree/" + BRANCH + "/" +
+                     matcher.group(1);
+        return "<a href=\"" + url + "\" target=\"_blank\">" + BRANCH + "</a>";
+      } else {
+        return "<b>Could not find path to source code: " + pathAndFile + "</b>";
+      }
+    }
+    return "<b>Could not find path to source code</b>";
+  }
 }

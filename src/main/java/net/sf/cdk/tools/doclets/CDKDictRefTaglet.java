@@ -18,11 +18,16 @@
  */
 package net.sf.cdk.tools.doclets;
 
-import com.sun.tools.doclets.Taglet;
-import com.sun.javadoc.*;
-import java.util.Map;
-import java.util.StringTokenizer;
+import com.sun.source.doctree.DocTree;
+import jdk.javadoc.doclet.Taglet;
+
+import javax.lang.model.element.Element;
+import java.util.EnumSet;
 import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.StringTokenizer;
 
 /**
  * Taglet that expands inline cdk.dictref tags into a weblink to the appropriate
@@ -62,33 +67,20 @@ public class CDKDictRefTaglet implements Taglet {
     public String getName() {
         return NAME;
     }
-    
-    public boolean inField() {
-        return true;
+
+    @Override
+    public Set<Location> getAllowedLocations() {
+        return EnumSet.allOf(Location.class);
     }
 
-    public boolean inConstructor() {
-        return true;
-    }
-    
-    public boolean inMethod() {
-        return true;
-    }
-    
-    public boolean inOverview() {
-        return true;
-    }
-
-    public boolean inPackage() {
-        return true;
-    }
-
-    public boolean inType() {
-        return true;
-    }
-    
+    @Override
     public boolean isInlineTag() {
         return false;
+    }
+
+    @Override
+    public String toString(List<? extends DocTree> tags, Element element) {
+        return toString(tags.toArray(new DocTree[0]));
     }
     
     public static void register(Map<String, CDKDictRefTaglet> tagletMap) {
@@ -100,8 +92,8 @@ public class CDKDictRefTaglet implements Taglet {
        tagletMap.put(tag.getName(), tag);
     }
 
-    public String toString(Tag tag) {
-        String tagText = tag.text();
+    public String toString(DocTree tag) {
+        String tagText = TagletUtil.getText(tag);
         String separator = ":";
         if (tagText.indexOf(separator) != -1) {
             StringTokenizer tokenizer = new StringTokenizer(tagText, separator);
@@ -123,7 +115,7 @@ public class CDKDictRefTaglet implements Taglet {
         }
     }
     
-    public String toString(Tag[] tags) {
+    public String toString(DocTree[] tags) {
         if (tags.length == 0) {
             return null;
         } else {

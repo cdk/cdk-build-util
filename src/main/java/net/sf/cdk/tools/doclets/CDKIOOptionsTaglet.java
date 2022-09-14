@@ -16,15 +16,17 @@
  */
 package net.sf.cdk.tools.doclets;
 
-import java.io.File;
-import java.util.Map;
-
+import com.sun.source.doctree.DocTree;
+import jdk.javadoc.doclet.Taglet;
 import org.openscience.cdk.io.IChemObjectIO;
 import org.openscience.cdk.io.setting.IOSetting;
 
-import com.sun.javadoc.SourcePosition;
-import com.sun.javadoc.Tag;
-import com.sun.tools.doclets.Taglet;
+import javax.lang.model.element.Element;
+import javax.lang.model.element.ElementKind;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Source for the cdk.iooptions JavaDoc tag. When a class is tagged with this
@@ -48,89 +50,15 @@ public class CDKIOOptionsTaglet implements Taglet {
         return NAME;
     }
 
-    /**
-     * @inheritDoc
-     */
     @Override
-    public boolean inField() {
-        return false;
+    public Set<Location> getAllowedLocations() {
+        return EnumSet.of(Location.TYPE);
     }
 
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public boolean inConstructor() {
-        return false;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public boolean inMethod() {
-        return false;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public boolean inOverview() {
-        return false;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public boolean inPackage() {
-        return false;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public boolean inType() {
-        return true;
-    }
-
-    /**
-     * @inheritDoc
-     */
     @Override
     public boolean isInlineTag() {
         return false;
     }
-
-    public static void register(Map<String, CDKIOOptionsTaglet> tagletMap) {
-    	CDKIOOptionsTaglet tag = new CDKIOOptionsTaglet();
-    	Taglet t = (Taglet) tagletMap.get(tag.getName());
-    	if (t != null) {
-    		tagletMap.remove(tag.getName());
-    	}
-    	tagletMap.put(tag.getName(), tag);
-    }
-
-
-    /**
-     * Extract the full class name from the tag source position.
-     *
-     * @param tag the tag on a given source file
-     * @return the class name
-     */
-    private static String getClassName(Tag tag){
-
-        SourcePosition position = tag.position();
-        File file               = position.file();
-
-        String path = file.getPath().replaceAll(File.separator, ".");
-
-        return path.substring(path.indexOf("org.openscience.cdk"),
-                              path.lastIndexOf(".java"));
-    }
-
 
     /**
      * Constructs a HTML table row (tr) for the given IO Setting. The row
@@ -154,13 +82,8 @@ public class CDKIOOptionsTaglet implements Taglet {
     /**
      * @inheritDoc
      */
-    @Override
-    public String toString(Tag tag) {
-
-    	// create a table with IOOptions
+    public String toString(String name) {
         StringBuilder tableContent = new StringBuilder();
-        String        name         = getClassName(tag);
-
         try {
 
             // get the class name and try invoking the default constructor
@@ -183,7 +106,9 @@ public class CDKIOOptionsTaglet implements Taglet {
 	    		}
 	    		tableContent.append("</table>");
                 tableContent.append("</dd></dt>");
-			}
+			} else {
+                System.err.println(name + " is not an instance of IChemObjectIO");
+            }
 
 		} catch (ClassNotFoundException ex){
             System.err.println("[IOOptionsTaglet] Unable to find: " + name);
@@ -199,12 +124,10 @@ public class CDKIOOptionsTaglet implements Taglet {
 
     }
 
-    /**
-     * @inheritDoc
-     */
     @Override
-    public String toString(Tag[] tags) {
-        return tags.length == 0 ? "" : toString(tags[0]);
+    public String toString(List<? extends DocTree> tags, Element element) {
+        if (element.getKind() != ElementKind.CLASS)
+            return "";
+        return toString(element.toString());
     }
-
 }

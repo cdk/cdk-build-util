@@ -18,9 +18,14 @@
  */
 package net.sf.cdk.tools.doclets;
 
-import com.sun.tools.doclets.Taglet;
-import com.sun.javadoc.*;
+import com.sun.source.doctree.DocTree;
+import jdk.javadoc.doclet.Taglet;
+
+import javax.lang.model.element.Element;
+import java.util.EnumSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Taglet used to indicate that the class is annotated to be <b>not</b> safe for
@@ -37,50 +42,28 @@ public class CDKThreadNonSafeTaglet implements Taglet {
         return NAME;
     }
 
-    public boolean inField() {
-        return false;
+    @Override
+    public Set<Location> getAllowedLocations() {
+        return EnumSet.of(Location.TYPE, Location.METHOD);
     }
 
-    public boolean inConstructor() {
-        return false;
-    }
-
-    public boolean inMethod() {
-        return true;
-    }
-
-    public boolean inOverview() {
-        return false;
-    }
-
-    public boolean inPackage() {
-        return false;
-    }
-
-    public boolean inType() {
-        return true;
-    }
-
+    @Override
     public boolean isInlineTag() {
         return false;
     }
 
-    public static void register(Map<String, CDKThreadNonSafeTaglet> tagletMap) {
-        CDKThreadNonSafeTaglet tag = new CDKThreadNonSafeTaglet();
-       Taglet t = (Taglet) tagletMap.get(tag.getName());
-       if (t != null) {
-           tagletMap.remove(tag.getName());
-       }
-       tagletMap.put(tag.getName(), tag);
+    @Override
+    public String toString(List<? extends DocTree> tags, Element element) {
+        return toString(tags.toArray(new DocTree[0]));
     }
 
-    public String toString(Tag tag) {
+    public String toString(DocTree tag) {
         return tag != null
             ? "<B>Thread Safe:</B> No\n"
             : "";
     }
     
-    public String toString(Tag[] tags) {
+    public String toString(DocTree[] tags) {
         return tags.length != 0
             ? "<B>Thread Safe:</B> No\n" :
             "";

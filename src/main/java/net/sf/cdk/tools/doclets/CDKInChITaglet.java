@@ -18,9 +18,14 @@
  */
 package net.sf.cdk.tools.doclets;
 
-import com.sun.tools.doclets.Taglet;
-import com.sun.javadoc.*;
+import com.sun.source.doctree.DocTree;
+import jdk.javadoc.doclet.Taglet;
+
+import javax.lang.model.element.Element;
+import java.util.EnumSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Taglet that expands @cdk.inchi tag into a RDFa marked up HTML
@@ -32,39 +37,21 @@ import java.util.Map;
 public class CDKInChITaglet implements Taglet {
     
     private static final String NAME = "cdk.inchi";
-    
+
     public String getName() {
         return NAME;
     }
-    
-    public boolean inField() {
-        return false;
+
+    @Override
+    public Set<Location> getAllowedLocations() {
+        return EnumSet.of(Location.METHOD, Location.TYPE);
     }
 
-    public boolean inConstructor() {
-        return false;
-    }
-    
-    public boolean inMethod() {
-        return true;
-    }
-    
-    public boolean inOverview() {
-        return false;
-    }
-
-    public boolean inPackage() {
-        return false;
-    }
-
-    public boolean inType() {
-        return true;
-    }
-    
+    @Override
     public boolean isInlineTag() {
         return false;
     }
-    
+
     public static void register(Map<String, CDKInChITaglet> tagletMap) {
        CDKInChITaglet tag = new CDKInChITaglet();
        Taglet t = (Taglet) tagletMap.get(tag.getName());
@@ -74,12 +61,17 @@ public class CDKInChITaglet implements Taglet {
        tagletMap.put(tag.getName(), tag);
     }
 
-    public String toString(Tag tag) {
+    @Override
+    public String toString(List<? extends DocTree> tags, Element element) {
+        return toString(tags.toArray(new DocTree[0]));
+    }
+
+    public String toString(DocTree tag) {
         return "<DT><B>InChI: </B><DD>"
                + expand(tag) + "</DD>\n";
     }
     
-    public String toString(Tag[] tags) {
+    public String toString(DocTree[] tags) {
         if (tags.length == 0) {
             return null;
         } else {
@@ -93,7 +85,7 @@ public class CDKInChITaglet implements Taglet {
         }
     }
 
-    private String expand(Tag tag) {
-        return "<span xmlns:chem=\"http://www.blueobelisk.org/chemistryblogs/\" property=\"chem:inchi\" class=\"chem:inchi\">" + tag.text() + "</span>";
+    private String expand(DocTree tag) {
+        return "<span xmlns:chem=\"http://www.blueobelisk.org/chemistryblogs/\" property=\"chem:inchi\" class=\"chem:inchi\">" + TagletUtil.getText(tag) + "</span>";
     }
 }

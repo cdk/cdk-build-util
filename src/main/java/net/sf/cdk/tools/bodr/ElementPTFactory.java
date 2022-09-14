@@ -23,11 +23,7 @@
  */
 package net.sf.cdk.tools.bodr;
 
-import org.openscience.cdk.annotations.TestClass;
-import org.openscience.cdk.annotations.TestMethod;
 import org.openscience.cdk.exception.CDKException;
-import org.openscience.cdk.tools.ILoggingTool;
-import org.openscience.cdk.tools.LoggingToolFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,7 +42,6 @@ import java.util.List;
  * @cdk.module     core
  * @cdk.githash
  */
-@TestClass("ElementPTFactoryTest")
 class ElementPTFactory
 {
 
@@ -83,7 +78,6 @@ class ElementPTFactory
      *@return The instance value
      *@exception java.io.IOException             Description of the Exception
      */
-    @TestMethod("testGetInstance")
     public static ElementPTFactory getInstance() throws IOException {
         if (efac == null) {
             efac = new ElementPTFactory();
@@ -97,7 +91,6 @@ class ElementPTFactory
      *
      *@return The size value
      */
-    @TestMethod("testGetSize")
     public int getSize() {
         return elements.size();
     }
@@ -108,7 +101,6 @@ class ElementPTFactory
      * @return  A Vector of PeriodicTableElement objects
      * @see PeriodicTableElement
      */
-    @TestMethod("testGetElements")
     public List<PeriodicTableElement> getElements() {
         return elements;
     }
@@ -119,7 +111,6 @@ class ElementPTFactory
 	 *@param  symbol  An element symbol to search for
 	 *@return         An array of element that matches the given element symbol
 	 */
-    @TestMethod("testGetElement_String")
 	public PeriodicTableElement getElement(String symbol) {
         for (PeriodicTableElement element : elements) {
             if (element.getSymbol().equals(symbol)) {
@@ -142,7 +133,6 @@ class ElementPTFactory
      * @throws org.openscience.cdk.exception.CDKException if there is an error during configuration
      * (such as invalid IUPAC group number)
 	 */
-    @TestMethod("testConfigure_PeriodicTableElement")
 	public PeriodicTableElement configure(PeriodicTableElement element) throws CDKException {
 		PeriodicTableElement elementInt = getElement(element.getSymbol());
 		
@@ -165,7 +155,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The atomic number value
 	 */
-    @TestMethod("testGetAtomicNumber_PeriodicTableElement")
 	public double getAtomicNumber(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getAtomicNumber();
@@ -177,7 +166,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The name value of this element
 	 */
-    @TestMethod("testGetName_PeriodicTableElement")
 	public String getName(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getName();
@@ -189,7 +177,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The chemical serie value of this element
 	 */
-    @TestMethod("testGetChemicalSerie_PeriodicTableElement")
 	public String getChemicalSerie(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getChemicalSerie();
@@ -201,7 +188,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The period value of this element
 	 */
-    @TestMethod("testGetPeriod_PeriodicTableElement")
 	public int getPeriod(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getPeriod();
@@ -213,7 +199,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The group value of this element
 	 */
-    @TestMethod("testGetGroup_PeriodicTableElement")
 	public int getGroup(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getGroup();
@@ -225,7 +210,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The phase value of this element
 	 */
-    @TestMethod("testGetPhase_PeriodicTableElement")
 	public String getPhase(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getPhase();
@@ -237,7 +221,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The CASE id value of this element
 	 */
-    @TestMethod("testGetCASid_PeriodicTableElement")
 	public String getCASid(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getCASid();
@@ -249,7 +232,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The Vdw radio value of this element
 	 */
-    @TestMethod("testGetVdwRadius_PeriodicTableElement")
 	public double getVdwRadius(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getVdwRadius();
@@ -261,7 +243,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The covalent radio value of this element
 	 */
-    @TestMethod("testGetCovalentRadius_PeriodicTableElement")
 	public double getCovalentRadius(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getCovalentRadius();
@@ -272,7 +253,6 @@ class ElementPTFactory
 	 * @param  element                     The PeriodicTableElement object
 	 * @return                             The Pauling Electronegativity value of this element
 	 */
-    @TestMethod("testGetPaulingEneg_PeriodicTableElement")
 	public double getPaulingEneg(PeriodicTableElement element){
     	PeriodicTableElement elementInt = getElement(element.getSymbol());
 		return elementInt.getPaulingEneg();

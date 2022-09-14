@@ -18,17 +18,19 @@
  */
 package net.sf.cdk.tools.doclets;
 
-import java.io.File;
-import java.util.Map;
-import java.util.StringTokenizer;
-
+import com.sun.source.doctree.DocTree;
+import jdk.javadoc.doclet.Taglet;
 import net.sf.cdk.tools.bibtex.BibTeXMLEntry;
 import net.sf.cdk.tools.bibtex.BibTeXMLFile;
 import nu.xom.Builder;
 import nu.xom.Document;
 
-import com.sun.javadoc.Tag;
-import com.sun.tools.doclets.Taglet;
+import javax.lang.model.element.Element;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.StringTokenizer;
 
 /**
  * Taglet that expands inline cdk.cite tags into a weblink to the CDK
@@ -65,35 +67,22 @@ public class CDKCiteTaglet implements Taglet {
     public String getName() {
         return NAME;
     }
-    
-    public boolean inField() {
-        return true;
+
+    @Override
+    public Set<Location> getAllowedLocations() {
+        return EnumSet.allOf(Location.class);
     }
 
-    public boolean inConstructor() {
-        return true;
-    }
-    
-    public boolean inMethod() {
-        return true;
-    }
-    
-    public boolean inOverview() {
-        return true;
-    }
-
-    public boolean inPackage() {
-        return true;
-    }
-
-    public boolean inType() {
-        return true;
-    }
-    
+    @Override
     public boolean isInlineTag() {
         return true;
     }
-    
+
+    @Override
+    public String toString(List<? extends DocTree> tags, Element element) {
+        return toString(tags.toArray(new DocTree[0]));
+    }
+
     public static void register(Map<String, CDKCiteTaglet> tagletMap) {
        CDKCiteTaglet tag = new CDKCiteTaglet();
        Taglet t = (Taglet) tagletMap.get(tag.getName());
@@ -103,16 +92,16 @@ public class CDKCiteTaglet implements Taglet {
        tagletMap.put(tag.getName(), tag);
     }
 
-    public String toString(Tag tag) {
-        return "(" + expandCitation(tag.text()) + ")";
+    public String toString(DocTree tag) {
+        return "(" + expandCitation(TagletUtil.getText(tag)) + ")";
     }
     
-    public String toString(Tag[] tags) {
+    public String toString(DocTree[] tags) {
         String result = null;
         if (tags.length > 0) {
             result = "[";
             for (int i=0; i<tags.length; i++) {
-                result += expandCitation(tags[i].text());
+                result += expandCitation(TagletUtil.getText(tags[i]));
                 if ((i+1)<tags.length) result += ", ";
             }
             result += "]";

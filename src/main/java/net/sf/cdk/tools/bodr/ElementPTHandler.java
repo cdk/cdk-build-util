@@ -23,11 +23,7 @@
  */
 package net.sf.cdk.tools.bodr;
 
-import org.openscience.cdk.annotations.TestClass;
-import org.openscience.cdk.annotations.TestMethod;
 import org.openscience.cdk.exception.CDKException;
-import org.openscience.cdk.tools.ILoggingTool;
-import org.openscience.cdk.tools.LoggingToolFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -54,7 +50,7 @@ import java.util.List;
  * @cdk.module core
  * @cdk.githash
  */
-@TestClass("ElementPTReaderTest") class ElementPTHandler extends DefaultHandler {
+class ElementPTHandler extends DefaultHandler {
     private final int SCALAR_UNSET         = 0;
     private final int LABEL_CAS            = 1;
     private final int SCALAR_NAME          = 2;
@@ -74,7 +70,6 @@ import java.util.List;
     public String               currentElement;
     public String               dictRef;
 
-    @TestMethod("testReading")
     public ElementPTHandler() {
     }
 
@@ -83,21 +78,18 @@ import java.util.List;
      *
      * @return A Vector object with all isotopes
      */
-    @TestMethod("testReading")
     public List<PeriodicTableElement> getElements() {
         return elements;
     }
 
     // SAX Parser methods
 
-    @TestMethod("testReading")
     public void startDocument() {
         elements = new ArrayList<PeriodicTableElement>();
         scalarType = SCALAR_UNSET;
         elementType = null;
     }
 
-    @TestMethod("testReading")
     public void endElement(String uri, String local, String raw) {
         if ("elementType".equals(local)) {
             elements.add(elementType);
@@ -157,7 +149,6 @@ import java.util.List;
         currentChars = "";
     }
 
-    @TestMethod("testReading")
     public void startElement(String uri, String local,
                              String raw, Attributes atts) {
         currentChars = "";
@@ -217,7 +208,6 @@ import java.util.List;
 
     }
 
-    @TestMethod("testReading")
     public void characters(char chars[], int start, int length) {
         currentChars += new String(chars, start, length);
     }

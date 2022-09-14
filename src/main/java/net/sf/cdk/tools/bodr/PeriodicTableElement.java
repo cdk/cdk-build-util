@@ -25,11 +25,7 @@
 package net.sf.cdk.tools.bodr;
 
 import org.openscience.cdk.CDKConstants;
-import org.openscience.cdk.annotations.TestClass;
-import org.openscience.cdk.annotations.TestMethod;
 import org.openscience.cdk.exception.CDKException;
-import org.openscience.cdk.tools.ILoggingTool;
-import org.openscience.cdk.tools.LoggingToolFactory;
 
 /**
  * <p>An PeriodicTableElement class is instantiated with at least the atom symbol:
@@ -54,7 +50,6 @@ import org.openscience.cdk.tools.LoggingToolFactory;
  * @cdk.module    core
  * @cdk.githash
  */
-@TestClass("PeriodicTableElementTest")
 class PeriodicTableElement implements Cloneable
 {
 
@@ -138,7 +133,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @param symbol The symbol of the element
      */
-    @TestMethod("testConstructor")
     public PeriodicTableElement(String symbol) {
         this.symbol = symbol;
     }
@@ -148,7 +142,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @param symbol The symbol of the element
      */
-    @TestMethod("testConstructor")
     public PeriodicTableElement(String symbol, Integer atomicNumber) {
         this.symbol = symbol;
         this.atomicNumber = atomicNumber;
@@ -159,7 +152,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @return the symbol
      */
-    @TestMethod("testGetSymbol")
     public String getSymbol() {
         return symbol;
     }
@@ -169,7 +161,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @param symbol the symbol
      */
-    @TestMethod("testSetSymbol")
     public void setSymbol(String symbol) {
         this.symbol = symbol;
     }
@@ -181,7 +172,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @see    #setName
      */
-    @TestMethod("testGetName")
     public String getName() {
         return this.name;
     }
@@ -193,7 +183,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @see    #getName
      */
-    @TestMethod("testSetName")
     public void setName(String name) {
         this.name = name;
     }
@@ -205,7 +194,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @see    #setChemicalSerie
      */
-    @TestMethod("testGetSeries")
     public String getChemicalSerie() {
         return this.chemicalSerie;
     }
@@ -217,7 +205,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @see    #getChemicalSerie
      */
-    @TestMethod("testSetSeries")
     public void setChemicalSerie(String chemicalSerie) {
         this.chemicalSerie = chemicalSerie;
     }
@@ -229,7 +216,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @see    #setPeriod
      */
-    @TestMethod("testGetPeriod")
     public Integer getPeriod() {
         return this.period;
     }
@@ -241,7 +227,6 @@ class PeriodicTableElement implements Cloneable
 	*
 	* @see    #getPeriod
 	*/
-    @TestMethod("testSetPeriod")
     public void setPeriod(Integer period)
 	{
 		this.period = period;
@@ -254,7 +239,6 @@ class PeriodicTableElement implements Cloneable
 	*
 	* @see    #setGroup
 	*/
-    @TestMethod("testGetGroup")
     public Integer getGroup()
 	{
 		return this.group;
@@ -268,7 +252,6 @@ class PeriodicTableElement implements Cloneable
      *          if an invalid IUPAC group number is specified.
      * @see #getGroup
      */
-    @TestMethod("testSetGroup")
     public void setGroup(Integer group) throws CDKException {
         if (group < 1 || group > 18) throw new CDKException("Invalid group number specified. Must be between 1 and 18");
         this.group = group;
@@ -281,7 +264,6 @@ class PeriodicTableElement implements Cloneable
 	*
 	* @see    #setPhase
 	*/
-    @TestMethod("testGetPhase")
     public String getPhase()
 	{
 		return this.phase;
@@ -295,7 +277,6 @@ class PeriodicTableElement implements Cloneable
 	* @see    #getGroup
 	* @see #getPhase
 	*/
-    @TestMethod("testSetPhase")
     public void setPhase(String  phase)
 	{
 		this.phase = phase;
@@ -308,7 +289,6 @@ class PeriodicTableElement implements Cloneable
 	*
 	* @see    #setCASid
 	*/
-    @TestMethod("testGetCASid")
     public String getCASid()
 	{
 		return this.casId;
@@ -321,7 +301,6 @@ class PeriodicTableElement implements Cloneable
 	*
 	* @see    #getCASid
 	*/
-    @TestMethod("testSetCASid")
     public void setCASid(String  casId)
 	{
 		this.casId = casId;
@@ -332,7 +311,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @return The VdW radius, or null if it is unavailable
      */
-    @TestMethod("testGetVdw")
     public Double getVdwRadius() {
         return vdwRadius;
     }
@@ -342,7 +320,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @param vdwRadius  The VdW radius
      */
-    @TestMethod("testSetVdw")
     public void setVdwRadius(Double vdwRadius) {
         this.vdwRadius = vdwRadius;
     }
@@ -352,7 +329,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @return the covalent radius, or null if it is unavailable
      */
-    @TestMethod("testGetCovalentRadius")
     public Double getCovalentRadius() {
         return covalentRadius;
     }
@@ -362,7 +338,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @param covalentRadius the covalent radius
      */
-    @TestMethod("testSetCovalentRadius")
     public void setCovalentRadius(Double covalentRadius) {
         this.covalentRadius = covalentRadius;
     }
@@ -372,7 +347,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @return   The electronegativity, null if not available for the element
      */
-    @TestMethod("testGetEneg")
     public Double getPaulingEneg() {
         return paulingEneg;
     }
@@ -382,7 +356,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @param paulingEneg The electronegativity
      */
-    @TestMethod("testSetEneg")
     public void setPaulingEneg(Double paulingEneg) {
         this.paulingEneg = paulingEneg;
     }
@@ -392,7 +365,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @return The cloned object
      */
-    @TestMethod("testClone")
     public Object clone() throws CloneNotSupportedException {
         PeriodicTableElement clone = null;
         try {
@@ -419,7 +391,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @return the atomic number
      */
-    @TestMethod("testGetSetAtomicNumber")
     public Integer getAtomicNumber() {
         return atomicNumber;
     }
@@ -429,7 +400,6 @@ class PeriodicTableElement implements Cloneable
      *
      * @param atomicNumber the atomic number
      */
-    @TestMethod("testGetSetAtomicNumber")
     public void setAtomicNumber(Integer atomicNumber) {
         this.atomicNumber = atomicNumber;
     }
@@ -438,7 +408,6 @@ class PeriodicTableElement implements Cloneable
      *
      *@return resultString  String
      */
-    @TestMethod("testString")
     public String toString() {
 		StringBuffer resultString = new StringBuffer(128);
 		resultString.append("PeriodicTableElement(");

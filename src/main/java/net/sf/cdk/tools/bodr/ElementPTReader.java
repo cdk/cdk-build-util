@@ -27,10 +27,6 @@
  */
 package net.sf.cdk.tools.bodr;
 
-import org.openscience.cdk.annotations.TestClass;
-import org.openscience.cdk.annotations.TestMethod;
-import org.openscience.cdk.tools.ILoggingTool;
-import org.openscience.cdk.tools.LoggingToolFactory;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -62,7 +58,6 @@ class ElementPTReader {
      *
      * @param input Reader with the XML source
      */
-    @TestMethod("testReading")
     public ElementPTReader(Reader input) {
         this.init();
         this.input = input;
@@ -116,7 +111,6 @@ class ElementPTReader {
      * @return a Vector of Isotope's. Returns an empty vector is some reading error
      *         occured.
      */
-    @TestMethod("testReading")
     public List<PeriodicTableElement> readElements() {
         List<PeriodicTableElement> elements = new ArrayList<PeriodicTableElement>();
         try {

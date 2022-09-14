@@ -18,9 +18,14 @@
  */
 package net.sf.cdk.tools.doclets;
 
-import com.sun.tools.doclets.Taglet;
-import com.sun.javadoc.*;
+import com.sun.source.doctree.DocTree;
+import jdk.javadoc.doclet.Taglet;
+
+import javax.lang.model.element.Element;
+import java.util.EnumSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Taglet that expands @cdk.bug tag into a weblink to CDK's
@@ -32,38 +37,36 @@ import java.util.Map;
 public class CDKBugTaglet implements Taglet {
     
     private static final String NAME = "cdk.bug";
-    
+
+    @Override
     public String getName() {
         return NAME;
     }
-    
-    public boolean inField() {
-        return false;
+
+    @Override
+    public Set<Location> getAllowedLocations() {
+        return EnumSet.of(Location.TYPE);
     }
 
-    public boolean inConstructor() {
-        return false;
-    }
-    
-    public boolean inMethod() {
-        return false;
-    }
-    
-    public boolean inOverview() {
-        return false;
+    @Override
+    public String toString(List<? extends DocTree> tags, Element element) {
+        if (tags.size() == 0) {
+            return null;
+        } else {
+            StringBuffer list = new StringBuffer();
+            list.append("<DT><B>This class is affected by these bug(s): </B><DD>");
+            for (int i=0; i<tags.size(); i++) {
+                list.append(expand(tags.get(i))).append(" ");
+            }
+            list.append("</DD>\n");
+            return list.toString();
+        }
     }
 
-    public boolean inPackage() {
-        return false;
-    }
-
-    public boolean inType() {
-        return true;
-    }
-    
     public boolean isInlineTag() {
         return false;
     }
+
     
     public static void register(Map<String, CDKBugTaglet> tagletMap) {
        CDKBugTaglet tag = new CDKBugTaglet();
@@ -74,27 +77,13 @@ public class CDKBugTaglet implements Taglet {
        tagletMap.put(tag.getName(), tag);
     }
 
-    public String toString(Tag tag) {
+    public String toString(DocTree tag) {
         return "<DT><B>This class is affected by these bug(s): </B><DD>"
                + expand(tag) + "</DD>\n";
     }
-    
-    public String toString(Tag[] tags) {
-        if (tags.length == 0) {
-            return null;
-        } else {
-        	StringBuffer list = new StringBuffer();
-        	list.append("<DT><B>This class is affected by these bug(s): </B><DD>");
-        	for (int i=0; i<tags.length; i++) {
-        		list.append(expand(tags[i])).append(" ");
-        	}
-        	list.append("</DD>\n");
-            return list.toString();
-        }
-    }
 
-    private String expand(Tag tag) {
-    	String tagText = tag.text(); 
+    private String expand(DocTree tag) {
+        String tagText = TagletUtil.getText(tag);
     	if (Integer.valueOf(tagText) > 100000) {
     		return "<a href=\"http://sourceforge.net/tracker/index.php?func=detail&group_id=20024&atid=120024&aid="
     				+ tagText + "\">" + tagText + "</a>";

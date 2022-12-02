@@ -1,6 +1,9 @@
 target
 *.class
 
+# Intellij files
+.idea/
+
 # Package Files #
 *.jar
 *.war

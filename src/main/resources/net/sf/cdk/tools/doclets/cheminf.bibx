@@ -1720,5 +1720,14 @@ Method </bibtex:title>
             <bibtex:pages>707-720</bibtex:pages>
         </bibtex:article>
     </bibtex:entry>
+    <bibtex:entry id="Dassault20">
+        <bibtex:techreport>
+          <bibtex:author>Dassault Systèmes</bibtex:author>
+          <bibtex:title>CTFile Formats Biovia Databases 2020</bibtex:title>
+          <bibtex:institution>Dassault Systèmes</bibtex:institution>
+          <bibtex:year>2020</bibtex:year>
+          <bibtex:url>https://discover.3ds.com/sites/default/files/2020-08/biovia_ctfileformats_2020.pdf</bibtex:url>
+        </bibtex:techreport>
+    </bibtex:entry>
 
 </bibtex:file>

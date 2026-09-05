@@ -12,7 +12,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <cdk.version>2.8</cdk.version>
+    <cdk.version>2.13</cdk.version>
   </properties>
 
   <dependencies>
@@ -44,12 +44,12 @@
     <dependency>
       <groupId>org.openscience.cdk</groupId>
       <artifactId>cdk-smiles</artifactId>
-      <version>2.8-SNAPSHOT</version>
+      <version>${cdk.version}</version>
     </dependency>
     <dependency>
       <groupId>org.openscience.cdk</groupId>
       <artifactId>cdk-libiocml</artifactId>
-      <version>2.8-SNAPSHOT</version>
+      <version>${cdk.version}</version>
     </dependency>
     <dependency>
       <groupId>org.openscience.cdk</groupId>

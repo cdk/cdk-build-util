@@ -1729,5 +1729,14 @@ Method </bibtex:title>
           <bibtex:url>https://discover.3ds.com/sites/default/files/2020-08/biovia_ctfileformats_2020.pdf</bibtex:url>
         </bibtex:techreport>
     </bibtex:entry>
+        <bibtex:entry id="Mayfield2017">
+        <bibtex:techreport>
+          <bibtex:author>John Mayfield and Roger Sayle</bibtex:author>
+          <bibtex:title>Building on Sand: Standard InChIs on non-standard MOLfiles</bibtex:title>
+          <bibtex:institution>NextMove Software</bibtex:institution>
+          <bibtex:year>2017</bibtex:year>
+          <bibtex:url>https://www.nextmovesoftware.com/talks/Mayfield_BuildingOnSand_InChI_201708.pdf</bibtex:url>
+        </bibtex:techreport>
+    </bibtex:entry>
 
 </bibtex:file>

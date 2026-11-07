@@ -7,7 +7,7 @@
 
   <groupId>org.openscience.cdk</groupId>
   <artifactId>cdk-build-utils</artifactId>
-  <version>1.0.2.9-jdk11</version>
+  <version>1.1</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
